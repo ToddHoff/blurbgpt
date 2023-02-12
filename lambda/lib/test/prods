@@ -1,0 +1,31 @@
+#! /usr/bin/env node
+
+const AppCfg     = require("../AppCfg");
+const Util       = require("../Util");
+const ProductDto = require("../ProductDto");
+
+(async () => {
+
+   try {
+
+      const cfg = new AppCfg();
+
+      const dto = new ProductDto(cfg, {period: "daily", user_id: "xxx@gmail.com" });
+      //await dto.create();
+
+      //const is = dto.get("toddhoffious@gmail.com", "https://www.amazon.com/dp/B0765C4SNR", "daily");
+      //if (!is) throw new Error("Does not exist.");
+
+      //await dto.markVerifyStatus("ERROR2", "2some message");
+      //await dto.markReportSent();
+
+      const results = await ProductDto.getAllByPeriod(cfg, "daily");
+      console.log(results);
+
+      //await ProductDto.applyAllByPeriod(cfg, "daily", (cfg, item) => { console.log("ITEM:", item); })
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

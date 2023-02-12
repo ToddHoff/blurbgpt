@@ -1,0 +1,73 @@
+#! /usr/bin/env node
+
+const greet = ({
+  greeting,
+  firstName,
+  lastName
+}) => {
+  return `${greeting}, ${firstName}${lastName}`;
+}
+
+console.log(greet({"XXX", "YYY", "ZZZ"}));
+console.log(greet({greeting: "XXX", firstName: "YYY", lastName: "ZZZ"}));
+process.exit();
+
+let lambda = require("../index.js");
+
+const event = {
+
+requestContext: {
+    accountId: '617644363390',
+    apiId: 'dozrt2m0kg',
+    authorizer: {
+            "jwt": {
+                "claims": {
+                    "aud": "2ar0q0ql2f2e6lf2krdc04hfnr",
+                    "auth_time": "1590294282",
+                    "cognito:username": "c9072180-dbf0-4766-a27d-7fdbb4111759",
+                    "email": "toddhoffious@gmail.com",
+                    "email_verified": "true",
+                    "event_id": "bab3c0cf-a0de-43f8-b3e4-ef914b2e767b",
+                    "exp": "1590297882",
+                    "iat": "1590294282",
+                    "iss": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_2na51igxa",
+                    "sub": "c9072180-dbf0-4766-a27d-7fdbb4111759",
+                    "token_use": "id"
+                },
+                "scopes": null
+            },
+    domainName: 'dozrt2m0kg.execute-api.us-east-1.amazonaws.com',
+    domainPrefix: 'dozrt2m0kg',
+    http: {
+      method: 'POST',
+      path: '/test',
+      protocol: 'HTTP/1.1',
+      sourceIp: '73.189.20.191',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36'
+    },
+    requestId: 'NC7l5i8toAMEMRw=',
+    routeKey: 'POST /plan-age',
+    stage: '$default',
+    time: '24/May/2020:16:51:49 +0000',
+    timeEpoch: 1590339109644
+  },
+},
+  body: '{"context":{"tz":"America/Los_Angeles"},"method":"/book-edit","params":{ "nick": "grape", "owner" : "yours", "period" : "weekly", "url" : "/dp/0807014273"}}',
+  isBase64Encoded: false
+
+}// event
+
+
+try {
+
+   (async () => {
+
+      console.time("timed:op");
+      await lambda.handler(event, {});
+      console.timeEnd("timed:op");
+
+   })();
+
+} catch (error) {
+   console.log("error:" + error);
+}

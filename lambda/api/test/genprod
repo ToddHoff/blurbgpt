@@ -1,0 +1,97 @@
+#! /usr/bin/env node
+
+const fs       = require('fs');
+const Path     = require('path');
+const moment   = require("../lib/node_modules/moment-timezone");
+
+const AppCfg   = require("../lib/AppCfg");
+const Plans    = require("../lib/Plans");
+const Util     = require("../lib/Util");
+const UsersDto = require("../lib/UsersDto");
+
+const CFG      = new AppCfg(__dirname);
+
+try {
+
+   (async () => {
+
+   const user = {
+      data: {
+         "version": "1",
+         "created_at": "2020-06-07T17:47:24.904Z",
+         "last_name": "Hoff",
+         "products": {
+           "https://www.amazon.com/dp/B0192CTMYG2": {
+             "nick": "daily2",
+             "period": "daily",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           },
+           "https://www.amazon.com/dp/B0192CTMYG": {
+             "nick": "daily1",
+             "period": "daily",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           },
+           "https://www.amazon.com/dp/B0192CTMYG4": {
+             "nick": "daily4",
+             "period": "daily",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           },
+           "https://www.amazon.com/dp/B0192CTMYG3": {
+             "nick": "daily3",
+             "period": "daily",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           },
+           "https://www.amazon.com/dp/B0192CTMYG6": {
+             "nick": "hourly1",
+             "period": "hourly",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           },
+           "https://www.amazon.com/dp/B0192CTMYG5": {
+             "nick": "weekly1",
+             "period": "weekly",
+             "source": "amazon",
+             "type": "book",
+             "url": "https://www.amazon.com/dp/B0192CTMYG"
+           }
+         },
+         "first_name": "Todd",
+         "status": "up",
+         "plan": {
+           "started_on": "2020-06-07T18:30:30.175Z",
+           "ppd": 0.14,
+           "price": 50,
+           "expires_on": "2021-06-07T18:30:30.175Z",
+           "qty": 10,
+           "payer_id": "7N45WPCKLHTVC",
+           "type": "plan2",
+           "capture_id": "7MF35653J3102220A",
+           "title": "Ten Book Plan",
+           "order_id": "40L32990FU4782636"
+         },
+         "email": "toddhoffious@gmail.com"
+      } // data
+   } // user
+
+   const path = Path.join("../", 'views', "products-page.hbs");
+   const html = Util.applyDataTemplate(path, {
+      cfg   : CFG,
+      user  : user
+   });
+
+   fs.writeFileSync("products.html", html); 
+
+   })();
+
+} catch (error) {
+   console.log("error:" + error);
+}

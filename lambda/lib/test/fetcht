@@ -1,0 +1,31 @@
+#! /usr/bin/env node
+
+const ScraperFetch = require("../ScraperFetch");
+const LambdaFetch = require("../LambdaFetch");
+const LocalFetch = require("../LocalFetch");
+const FakeHeader  = require("../FakeHeader");
+
+const AppCfg = require("../AppCfg");
+
+const cfg  = new AppCfg("..");
+
+
+(async () => {
+
+   try {
+    
+      //const fh = new FakeHeader();
+      //console.log(fh.header());
+
+      //const fetch = new LambdaFetch(cfg);
+      //const fetch = new ScraperFetch(cfg);
+
+      const fetch = new LocalFetch(cfg);
+      const data = await fetch.invoke("https://www.amazon.com/Explain-Cloud-Like-Im-10-ebook/dp/B0765C4SNR");
+      console.log(await data.text());
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

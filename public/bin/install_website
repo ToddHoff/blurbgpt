@@ -1,0 +1,34 @@
+#!/bin/bash
+
+WEBSITE_DIR="$HOME/blurbgpt/public"
+REGION="us-east-1"
+ACL=""
+DST_S3_BUCKET=""
+
+choice="$1"
+
+echo "Install website to " $choice 
+
+if [ $choice != "test" ] && [ $choice != "prod" ]
+then
+  echo Invalid installation type $choice. Must be test or prod.
+  exit 1
+fi
+
+if [ $choice == "test" ]
+then
+ cp $WEBSITE_DIR/bin/web-test-cfg.js $WEBSITE_DIR/js/cfg.js
+
+ DST_S3_BUCKET="s3://test.blurbgpt.net" 
+fi
+
+if [ $choice == "prod" ]
+then
+ cp $WEBSITE_DIR/bin/web-prod-cfg.js $WEBSITE_DIR/js/cfg.js
+
+ DST_S3_BUCKET="s3://blurbgpt.net" 
+fi
+
+ACL="--acl public-read"
+
+aws s3 sync $WEBSITE_DIR --region $REGION $DST_S3_BUCKET $ACL --exclude "Makefile" --exclude "bin/*"

@@ -1,0 +1,22 @@
+#! /usr/bin/env node
+
+const AmazonPage = require("../AmazonPage");
+
+const AppCfg = require("../AppCfg");
+
+const cfg  = new AppCfg("..");
+
+
+(async () => {
+
+   try {
+
+      const page = new AmazonPage(cfg, "https://www.amazon.com/This-Tender-Land-William-Krueger-ebook/dp/B010MHAEGA"); 
+      const data = await page.scrape();
+      console.log(data);
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

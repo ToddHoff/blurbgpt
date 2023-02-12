@@ -1,0 +1,201 @@
+
+.plan-pricing-page {
+   background-color : white;
+}
+
+.plan {
+   max-width        : 70%; 
+   padding-top      : 0px;
+   margin-top       : 0px;
+   padding-left     : 0px;
+   padding-bottom   : 0px;
+   margin-right     : auto;
+   margin-left      : auto;
+   border           : 1px solid rgba(200,200,200,9.20);
+   box-shadow       : 0 0 5px 2px grey;
+   max-width        : 98%; 
+}
+
+.price-item {
+   font-size        : 3vh;
+}
+
+.plan-header-td {
+   padding          : 0px 10px 0px 0px;
+}
+
+.plan-entry-title {
+   font-size        : 5vh;
+}
+
+.plan-entry-subtitle {
+   font-size        : 4vh;
+}
+
+.plan-entry-price {
+   font-size        : 4vh;
+}
+
+.plan-page-title {
+   font-size        : 5.5vh;
+}
+
+.plan-page-maxim {
+   margin-top       : 1vh;
+   margin-bottom    : 1vh;
+   font-size        : 2.5vh;
+}
+
+.plan-paypal-title {
+   padding-top      : 0px;
+   padding-bottom   : 20px;
+   font-size        : 2.5vh;
+   margin-top       : 25px;
+}
+
+.plan-button-text {
+   padding-top      : 4px;
+}
+
+.plan-line {
+   width            : 100%;
+   background-color : black;
+   border           : 0 none;
+   color            : black;
+   height           : 1px;
+   padding          : 0;
+   margin           : 0;
+   margin-top       : 5px;
+}
+
+.plan-explainer {
+   font-size        : 2.0vh;
+   margin-bottom    : 5px;
+}
+
+.plan-header {
+   text-align       : left;
+   padding-top      : 5px;
+   padding-left     : 10px;
+   width            : 100%;
+   background-color : white; 
+}
+
+.plan-body {
+   text-align       : left;
+   font-size        : 2vh;
+   background-color : #daffe7; 
+   padding          : 0;
+   margin           : 0;
+}
+
+.plan-unavailable-btn {
+   background-color : #FF6961;
+   color            : white;
+   border           : 1px solid rgba(255,255,255,.7);
+   box-shadow       : 3px 3px 3px 2px rgba(216,216,216,.7);
+   padding          : 10px 15px 10px 15px !important; 
+   font-size        : 2.5vh !important;
+}
+
+.plan-current-btn {
+   border           : 1px solid rgba(255,255,255,.7);
+   box-shadow       : 3px 3px 3px 2px rgba(216,216,216,.7);
+   padding          : 10px 15px 10px 15px !important; 
+   font-size        : 2.5vh !important;
+}
+
+.plan-pricing-intro {
+   margin-bottom    : 5px;
+}
+
+.plan-problem {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   padding-right    : 5px;
+   padding-left     : 5px;
+}
+
+.plan-notice {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   padding-right    : 5px;
+   padding-left     : 5px;
+   color            : red;
+}
+
+.plan-book-icon {
+   color            : red;
+   margin-bottom    : 5px;
+}
+
+.plan-book-list {
+   margin : 0; 
+   padding : 0;
+   text-align       : center;
+}
+
+.plan-paypal-container {
+   padding          : 0px 0px 0px 0px;
+   margin           : 0px 0px 0px 0px;
+   text-align       : center;
+   max-width        : 98%; 
+   display          : inline-block;
+}
+
+@media only screen and (min-width: 375px) {
+
+   .plan-page-title {
+      font-size        : 4.5vh;
+   }
+
+   .plan-page-maxim {
+      font-size        : 2.0vh;
+   }
+
+   .plan-entry-title {
+      font-size        : 4vh;
+   }
+
+   .plan-entry-subtitle {
+      font-size        : 3vh;
+   }
+   
+   .plan-entry-price {
+      font-size        : 3vh;
+   }
+
+   .price-item {
+      font-size        : 2vh;
+   }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+   .plan-page-maxim {
+      width            : 70%; 
+   }
+
+   .plan-paypal-container {
+      max-width        : 70%; 
+   }
+
+   .plan {
+      max-width        : 70%; 
+   }
+
+}
+
+@media only screen and (min-width: 1024px) {
+   .plan {
+      max-width        : 50%; 
+  }
+
+  .plan-problem {
+      font-size        : 1.5vh;
+  }
+
+  .plan-notice {
+      font-size        : 1.5vh;
+  }

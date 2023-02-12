@@ -1,0 +1,21 @@
+#! /usr/bin/env node
+
+const AppCfg        = require("../AppCfg");
+const Util          = require("../Util");
+const SummaryReport = require("../SummaryReport");
+
+(async () => {
+
+   try {
+
+      const cfg = new AppCfg();
+
+      const report = new SummaryReport(cfg, "toddhoffiou.s@gmail.com");
+      report.sendReport();
+
+   } catch (error) {
+      console.log(error);
+      console.log(error.stack);
+   }
+
+})();

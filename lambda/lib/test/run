@@ -1,0 +1,72 @@
+#! /usr/bin/env node
+
+const Util = require('../Util');
+
+const x = Object.assign({ a: "aa"}, null);
+console.log(x);
+
+process.exit();
+
+
+const Selector = require("../Selector");  
+
+   //(async () => {
+   //})();
+
+function test_selector() {
+
+   let s
+
+   try {
+      s = new Selector();
+   } 
+   catch (error) {
+      console.log(error);
+   }
+
+   try {
+      s = new Selector([]);
+   } 
+   catch (error) {
+      console.log(error);
+   }
+
+   let options = ["0"];
+   console.log("options:", options);
+   s = new Selector(options);
+   for (let i = 0; i < (options.length*2)+1; i++) {
+      console.log("next:", s.next());
+  }
+
+   options = ["0", "1"];
+   console.log("options:", options);
+   s = new Selector(options);
+   for (let i = 0; i < (options.length*2)+1; i++) {
+      console.log("next:", s.next());
+  }
+
+   options = ["0", "1", "2"];
+   console.log("options:", options);
+   s = new Selector(options);
+   for (let i = 0; i < (options.length*2)+1; i++) {
+      console.log("next:", s.next());
+  }
+
+   options = ["0", "1", "2", "3"];
+   console.log("options:", options);
+   s = new Selector(options);
+   for (let i = 0; i < (options.length*2)+1; i++) {
+      console.log("next:", s.next());
+  }
+
+}
+
+try {
+
+   test_selector();
+
+} catch (error) {
+   console.log("error:" + error);
+}
+
+

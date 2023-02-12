@@ -1,0 +1,37 @@
+#! /usr/bin/env node
+
+const UsersDto  = require("./lib/UsersDto");
+const AppCfg    = require("./lib/AppCfg");
+const Util      = require("./lib/Util");
+
+const cfg  = new AppCfg("..");
+
+const DB_ACTIONS = [ 
+   { 
+      email      : "1@gmail.com",
+      first_name : "Todd",
+      last_name  : "Hoff",
+      counter    : "1"
+   }
+]
+
+async function update() {
+
+   DB_ACTIONS.forEach(async function(item) {
+      const dto  = new UsersDto(cfg);
+      dto.data = Object.assign(dto.data, item);
+      await dto.update(dto);
+   })
+}
+
+(async () => {
+
+   try {
+
+      await update();
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

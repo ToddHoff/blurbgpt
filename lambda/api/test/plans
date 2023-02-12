@@ -1,0 +1,24 @@
+#! /usr/bin/env node
+
+const moment = require("../lib/node_modules/moment-timezone");
+
+const Plans = require("../lib/Plans");
+const Util = require("../lib/Util");
+
+const plans = new Plans();
+
+try {
+
+   let user_plan = {
+        type : "plan3",
+        started_on : moment().subtract(1, 'month').toISOString(), 
+        expires_on : moment().add(2, 'month').toISOString(), 
+        ppd: .07
+   }
+
+   let schedule = plans.calcNewPlanSchedule(user_plan)
+   console.log(schedule);
+
+} catch (error) {
+   console.log("error:" + error);
+}

@@ -1,0 +1,17 @@
+#! /usr/bin/env node
+
+const Util = require("../Util");
+
+
+(async () => {
+
+   try {
+
+     console.log(Util.hashCode('Hello!'))
+    
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

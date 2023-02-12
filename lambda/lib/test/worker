@@ -1,0 +1,26 @@
+#! /usr/bin/env node
+
+const Worker  = require("worker_threads");
+
+const AppCfg  = require("../AppCfg");
+const Util    = require("../Util");
+const Vault   = require("../Vault");
+
+const cfg  = new AppCfg("..");
+
+
+(async () => {
+
+   try {
+
+      //const vault = new Vault(cfg);
+      //await vault.create("toddhoffious@gmail.com", "/dp/1111", Util.utcNow(), "daily", "page.html", "<h1>html</h1>");
+
+      //let url = vault.generatePresignedUrl("toddhoffious@gmail.com", "/dp/1111", Util.utcNow(), "daily", "page.html");
+      //console.log(url);
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

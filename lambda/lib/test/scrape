@@ -1,0 +1,50 @@
+#! /usr/bin/env node
+
+const AppCfg     = require("../AppCfg");
+const Util       = require("../Util");
+const AmazonPage = require("../AmazonPage");
+const ProductDto = require("../ProductDto");
+const fs         = require('fs'); 
+
+(async () => {
+
+   try {
+
+      const cfg = new AppCfg();
+
+      cfg.is_write_scraped_file = true;
+
+      //const url = "https://www.amazon.com/dp/B0192CTMYG";
+      //const url = "https://www.amazon.com/dp/B079ZKT9G8"
+      //const url = "https://www.amazon.com/dp/B08KHTXWNV";
+      //const url = "https://www.amazon.com/dp/B087V733YJ";
+      const url = "http://amzn.com/0735219095";
+
+      const page = new AmazonPage(cfg, url);
+      page.fetchers.next();
+      //await page.scrape();
+
+      //fs.writeFileSync('./test.html', page.html, {encoding:'utf8'}); 
+      //const data = fs.readFileSync('./17.html', {encoding:'utf8', flag:'r'}); 
+      //const data = fs.readFileSync('./14.page.html', {encoding:'utf8', flag:'r'}); 
+      //const data = fs.readFileSync('./harry.html', {encoding:'utf8', flag:'r'}); 
+      ////const data = fs.readFileSync('./20.page.html', {encoding:'utf8', flag:'r'}); 
+      //const data = fs.readFileSync('./B019PIOJYU.html', {encoding:'utf8', flag:'r'}); 
+      //const data = fs.readFileSync('/tmp/scraped.html', {encoding:'utf8', flag:'r'}); 
+      //const data = fs.readFileSync('./altave.html', {encoding:'utf8', flag:'r'}); 
+      const data = fs.readFileSync('./midnight.html', {encoding:'utf8', flag:'r'}); 
+      page.html = data;
+      page.extract();
+      console.log(page.data);
+
+      //const product_dto = new ProductDto(cfg, { user_id: "toddhoffious@gmail.com", url: url });
+      //if (await product_dto.get() == null) throw new Error("FAIL");
+
+      //product_dto.statsUpdate(page.data); 
+
+   } catch (error) {
+      console.log(error);
+      console.log(error.stack);
+   }
+
+})();

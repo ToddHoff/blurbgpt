@@ -1,0 +1,43 @@
+#! /usr/bin/env node
+
+const moment    = require("moment-timezone");
+const AppCfg    = require("../AppCfg");
+const Util      = require("../Util");
+const SplitsDto = require("../SplitsDto");
+
+const cfg  = new AppCfg("..");
+
+
+(async () => {
+
+   try {
+      const url        = "https://www.amazon.com/dp/B0192CTMYG"; 
+      const url2       = "https://www.amazon.com/dp/XXXXXXXXXX"; 
+      const url3       = "https://www.amazon.com/dp/YYYYYYYYYY"; 
+      const user_id    = "toddhoffious@gmail.com";
+      const created_on = Util.isoNow();
+      const next_day   = Util.isoTomorrow();
+      const name       = "Ted1"; 
+      const name2      = "Ted2"; 
+
+      {
+      const create_dto = new SplitsDto(cfg, {user_id: user_id, url : url, created_on : created_on, name: name});
+      await create_dto.create();
+      }
+
+      {
+      const create_dto = new SplitsDto(cfg, {user_id: user_id, url : url, created_on : next_day, name: name2});
+      await create_dto.create();
+      }
+
+      const get_dto = new SplitsDto(cfg, {user_id: user_id, url : url });
+      //if (await get_dto.getByUrl() == null) throw new Error("Fail get.");
+      if (await get_dto.getByDateRange(created_on, created_on) == null) throw new Error("Fail get by date range.");
+
+      console.log("SPLITS:", get_dto.data.splits);
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

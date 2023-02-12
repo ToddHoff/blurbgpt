@@ -1,0 +1,962 @@
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <meta name="x-apple-disable-message-reformatting">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+   <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+
+   <title> Hourly Best Sellers Report</title>
+
+   <style>
+     th { 
+        font-size: large;
+        color: gold;
+        background-color: black;
+        text-align : center;
+        padding: 6px 6px 6px 6px;
+     }
+     td { 
+        border: 1px solid #ddd;
+        text-align : center;
+        font-size: large;
+     }
+     table {
+        width: 100%;  
+        background-color: white; 
+        cellpadding: 0;
+        text-align : center;
+     }
+     body {
+        padding:0; 
+        margin:0; 
+     }
+     .title {
+        margin-top: 25px;
+        margin-bottom: 5px;
+        font-size: xx-large;
+     }
+     .subtitle {
+        font-size     : x-large;
+        font-style    : italic;
+        margin-bottom : 10px;
+     }
+     .number {
+        text-align : center;
+     }
+     .order_type {
+        font-style    : italic;
+        font-size     : medium;
+     }
+     .field {
+        background-color:white; 
+        padding: 5px 5px 15px 5px; 
+        margin-top: 25px;
+     }
+     .summary {
+        text-align : center;
+     }
+     .summary_value {
+        font-size  : x-large; 
+        top        : 0; 
+        color      : black; 
+        font-style : bold;
+        background-color: white;
+        padding: 4px 4px 4px 4px;
+     }
+     .summary_change {
+        font-size  : large !important; 
+        margin-left: 6px;
+     }
+     .summary_metric {
+        font-size  : x-large !important; 
+        color      : gold;
+        background-color : black;
+        width: 100%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+     }
+     .intro table td {
+        border: none;
+        text-align: left;
+     }
+     .no-border {
+        border: none;
+     }
+     .w-100 {
+        width: 100% !important;
+     }
+     .w-70 {
+        width: 70% !important;
+     }
+     .w-75 {
+        width: 75% !important;
+     }
+     .w-25 {
+        width: 25% !important;
+     }
+     .w-30 {
+        width: 30% !important;
+     }
+     .w-35 {
+        width: 35% !important;
+     }
+     .w-50 {
+        width: 50% !important;
+     }
+     .center {
+        text-align: center;
+     }
+     .free-msg {
+        margin-top       : 45px;
+        text-align       : center;
+        background-color : white;
+     }
+     .expired-msg {
+        margin-top       : 45px;
+        text-align       : center;
+        background-color : white;
+     }
+     .footer {
+        margin-top       : 45px;
+        text-align       : center;
+        background-color : white;
+        font-size        : small;
+     }
+     .container {
+        font-size: medium;
+     }
+     .award {
+        height : 50px; 
+        width  : 50px; 
+     }
+   </style>
+</head>
+<body>
+<div class="container">
+   
+<div class="intro">
+Hi Todd,
+<p>
+Here's your  Hourly Best Sellers Rank report for Aug 1 08:33 PM - Aug 1 09:27 PM:
+<table>
+<tr>
+  <td width="5%"> <b>Title</b>:</td>
+  <td> <a href="https://www.amazon.com/dp/B0192CTMYG">Harry Potter and the Sorcerer's Stone</a></td>
+</tr>
+<tr>
+   <td width="5%"><b>Author</b>: </td>
+   <td>J.K. Rowling</td>
+</tr>
+<tr>
+   <td width="5%"><b>Type</b>:</td>
+   <td> Kindle Edition</td>
+</tr>
+<tr>
+   <td width="5%"><b>Store</b>:</td>
+   <td> Paid Kindle Store (<span class="order_type">new</span>) </td>
+</tr>
+<tr>
+   <td width="5%"><b>Series</b>:</td>
+   <td> Book 1 of 7 in Harry Potter</td> 
+</tr>
+</table>
+</div>
+
+<center>
+<div class="field">
+   
+<table class="summary">
+<tr>
+<td class="w-50 center" style="border: 1px solid grey">
+   <div class="summary_metric">Sales Rank</div>
+   <div class="summary_value"> 
+      28
+      <span class="summary_change" style="color:green">-11,112</span>
+   </div>
+</td>
+<td class="w-50 center" style="border:1px solid grey">
+   <div class="summary_metric">Total Reviews</div>
+   <div class="summary_value"> 
+      23,966
+      <span class="summary_change" style="color:green">+2</span>
+   </div>
+</td>
+</tr>
+<tr>
+<td class="w-50 center" style="border: 1px solid grey">
+   <div class="summary_metric">Review Average</div>
+   <div class="summary_value"> 
+      4.8 stars 
+   </div>
+</td>
+<td class="w-50 center" style="border:1px solid grey">
+   <div class="summary_metric">Price</div>
+   <div class="summary_value"> 
+      $8.99
+      <span class="summary_change" style="color:green">+0.83</span>
+   </div>
+</td>
+</tr>
+</table>
+
+🏆 Congratulations! Your sales rank has trended up (or stayed even) for the last 4 hours. Amazon's recommendation algorithm loves that kind of consistency.
+
+   
+<div class="title">Current Changes</div>
+<div class="subtitle">Aug 1 08:33 PM - Aug 1 09:27 PM</div>
+<table>
+   <tr>
+     <th>Trend</th>
+     <th>Metric</th>
+     <th>Change</th>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:green">Up</span>
+      </td>
+      <td>
+         Sales Rank
+      </td>
+      <td class="number">
+         <span style="color:green">-11,112</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:green">Up</span>
+      </td>
+      <td>
+         Review Count
+      </td>
+      <td class="number">
+         <span style="color:green">+2</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:green">Up</span>
+      </td>
+      <td>
+         Price
+      </td>
+      <td class="number">
+         <span style="color:green">+0.83</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:red">Deleted</span>
+      </td>
+      <td>
+         Category Teen & Young Adult School & Education Fiction eBooks was rank 21
+      </td>
+      <td class="number">
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:green">Up</span>
+      </td>
+      <td>
+         Teen & Young Adult Wizards & Witches Fantasy eBooks Rank
+      </td>
+      <td class="number">
+         <span style="color:green">-53</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:red">Deleted</span>
+      </td>
+      <td>
+         Category Teen & Young Adult Wizards & Witches Fantasy was rank 62
+      </td>
+      <td class="number">
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:blue">New</span>
+      </td>
+      <td>
+         Category Teen & Young Adult Fiction about Orphans & Foster Homes debuts at rank 1
+      </td>
+      <td class="number">
+         <span style="color:green">+1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:blue">New</span>
+      </td>
+      <td>
+         Category Children's Orphans & Foster Homes Books debuts at rank 1
+      </td>
+      <td class="number">
+         <span style="color:green">+1</span>
+      </td>
+   </tr>
+</table>
+
+   
+<div class="title">Current Rankings</div>
+<table>
+   <tr>
+     <th>Category</th>
+     <th>Aug 1 09:27 PM</th>
+     <th>Aug 1 08:33 PM</th>
+   </tr>
+   <tr>
+      <td class="w-30" valign="middle">
+         <span><b>Paid Kindle Store</b></span>
+      </td>
+      <td class="w-35 center"> 
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle">
+               <span>28</span>
+            </td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50097817086_c217dfdc18_q.jpg'></td>
+         </tr></table>
+      </td>
+      <td class="w-35">
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>11,140</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50098044492_ed60ac96f9_q.jpg'></td>
+         </tr></table>
+      </td>
+   </tr>
+   <tr>
+      <td class="w-30" valign="middle">
+         <span><b>Teen & Young Adult Fiction about Orphans & Foster Homes</b></span>
+      </td>
+      <td class="w-35 center"> 
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>1</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50098044442_67019be6e8_q.jpg'></td>
+         </tr></table>
+      </td>
+      <td class="w-35">
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span></span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp;</td>
+         </tr></table>
+      </td>
+   </tr>
+   <tr>
+      <td class="w-30" valign="middle">
+         <span><b>Teen & Young Adult Wizards & Witches Fantasy eBooks</b></span>
+      </td>
+      <td class="w-35 center"> 
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>1</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50098044442_67019be6e8_q.jpg'></td>
+         </tr></table>
+      </td>
+      <td class="w-35">
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>54</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50098044162_df9eba6e24_q.jpg'></td>
+         </tr></table>
+      </td>
+   </tr>
+   <tr>
+      <td class="w-30" valign="middle">
+         <span><b>Children's Orphans & Foster Homes Books</b></span>
+      </td>
+      <td class="w-35 center"> 
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>1</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50098044442_67019be6e8_q.jpg'></td>
+         </tr></table>
+      </td>
+      <td class="w-35">
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span></span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp;</td>
+         </tr></table>
+      </td>
+   </tr>
+   <tr>
+      <td class="w-30" valign="middle">
+         <span><b>Amazon Charts</b></span>
+      </td>
+      <td class="w-35 center"> 
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>4</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50097817021_3ca01e9b32_q.jpg'></td>
+         </tr></table>
+      </td>
+      <td class="w-35">
+         <table class="w-100 no-border"><tr>
+            <td class="w-75 number no-border center" valign="middle"><span>4</span></td>
+            <td class="w-25 no-border center"        valign="middle">&nbsp; <img class='award' src='https://live.staticflickr.com/65535/50097817021_3ca01e9b32_q.jpg'></td>
+         </tr></table>
+      </td>
+   </tr>
+</table>
+
+   
+<div class="title">Current Reviews</div>
+<table>
+   <tr>
+     <th>Rating</th>
+     <th>Aug 1 09:27 PM</th>
+     <th>Aug 1 08:33 PM</th>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>Total</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>23,966</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>23,964</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>Average</b></span>
+      </td>
+      <td class="number" valign="middle">
+         <span>4.8 stars</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>4.8 stars</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>5 star</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>89%</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>89%</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>4 star</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>6%</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>6%</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>3 star</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>2%</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>2%</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>2 star</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>1%</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>1%</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span><b>1 star</b></span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>2%</span>
+      </td>
+      <td class="number" valign="middle"> 
+         <span>2%</span>
+      </td>
+   </tr>
+</table>
+
+   
+<div class="title">Changes Over Time</div>
+<div class="subtitle">Jul 31 10:33 PM - Aug 1 09:27 PM</div>
+<table>
+   <tr>
+     <th>Trend</th>
+     <th>Metric</th>
+     <th>Change</th>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:red">Down</span>
+      </td>
+      <td>
+         Sales Rank
+      </td>
+      <td class="number">
+         <span style="color:red">+11</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:green">Up</span>
+      </td>
+      <td>
+         Review Count
+      </td>
+      <td class="number">
+         <span style="color:green">+27</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:red">Deleted</span>
+      </td>
+      <td>
+         Category Teen & Young Adult Family Fiction was rank 1
+      </td>
+      <td class="number">
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:red">Deleted</span>
+      </td>
+      <td>
+         Category Children's Humorous Literature was rank 1
+      </td>
+      <td class="number">
+         &nbsp;
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:blue">New</span>
+      </td>
+      <td>
+         Category Teen & Young Adult Fiction about Orphans & Foster Homes debuts at rank 1
+      </td>
+      <td class="number">
+         <span style="color:green">+1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="25%">
+         <span style="color:blue">New</span>
+      </td>
+      <td>
+         Category Teen & Young Adult Wizards & Witches Fantasy eBooks debuts at rank 1
+      </td>
+      <td class="number">
+         <span style="color:green">+1</span>
+      </td>
+   </tr>
+</table>
+   
+<div class="title">Summary Statistics</div>
+<div class="subtitle">Includes all Categories</div>
+<table>
+   <tr>
+     <th>Metric</th>
+     <th>Mean</th>
+     <th>Max</th>
+     <th>Min</th>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Amazon Charts</span>
+      </td>
+      <td class="number">
+         <span>4.00</span>
+      </td>
+      <td class="number">
+         <span>4</span>
+      </td>
+      <td class="number">
+         <span>4</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Books on Friendship</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Fantasy & Magic Adventure</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Humorous Action & Adventure</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Humorous Literature</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Issues in School Books</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Children's Orphans & Foster Homes Books</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Fantasy</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Fantasy Action & Adventure</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Fantasy Adventure Fiction</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Humorous Fantasy</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Paranormal & Urban Fantasy</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Price</span>
+      </td>
+      <td class="number">
+         <span>8.53</span>
+      </td>
+      <td class="number">
+         <span>10.86</span>
+      </td>
+      <td class="number">
+         <span>3.4</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Review Average</span>
+      </td>
+      <td class="number">
+         <span>4.80</span>
+      </td>
+      <td class="number">
+         <span>4.8</span>
+      </td>
+      <td class="number">
+         <span>4.8</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Review Count</span>
+      </td>
+      <td class="number">
+         <span>23,926.16</span>
+      </td>
+      <td class="number">
+         <span>23,966</span>
+      </td>
+      <td class="number">
+         <span>23,855</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Sales Rank</span>
+      </td>
+      <td class="number">
+         <span>9,172.81</span>
+      </td>
+      <td class="number">
+         <span>15,468</span>
+      </td>
+      <td class="number">
+         <span>14</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Action & Adventure eBooks</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Family Fiction</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Fantasy Action & Adventure</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Fiction about Orphans & Foster Homes</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Humor Nonfiction eBooks</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Humorous Fiction</span>
+      </td>
+      <td class="number">
+         <span>1.00</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult School & Education Fiction eBooks</span>
+      </td>
+      <td class="number">
+         <span>19.57</span>
+      </td>
+      <td class="number">
+         <span>22</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Wizards & Witches Fantasy</span>
+      </td>
+      <td class="number">
+         <span>65.06</span>
+      </td>
+      <td class="number">
+         <span>79</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+   <tr>
+      <td width="35%">
+         <span>Teen & Young Adult Wizards & Witches Fantasy eBooks</span>
+      </td>
+      <td class="number">
+         <span>54.00</span>
+      </td>
+      <td class="number">
+         <span>62</span>
+      </td>
+      <td class="number">
+         <span>1</span>
+      </td>
+   </tr>
+</table>
+   <div class="title">Sales Rank</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A17%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A13660%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A13915%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A17%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A13915%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A13306%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A17%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A17%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A12439%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A11250%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A11250%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A11250%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A17%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A9438%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A9438%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A10178%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A18%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A10178%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A10994%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A10994%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A10994%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A11140%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A11140%7D%2C%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A28%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23856C88'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(13915%20%2F%2017%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%2017)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+
+<div class="title">Sales Rank Split Ad 2</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-09-13%22%2C%22y%22%3A11311%7D%2C%7B%22t%22%3A%222020-09-12%22%2C%22y%22%3A12354%7D%2C%7B%22t%22%3A%222020-09-11%22%2C%22y%22%3A9153%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23856C88'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'day'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(12354%20%2F%209153%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%209153)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%2C%20annotation%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20annotations%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'line'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mode%3A%20'vertical'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleID%3A%20'x-axis-0'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20value%3A%20'2020-09-12'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20borderColor%3A%20'red'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20borderWidth%3A%204%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20enabled%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20content%3A%20'Ad%202'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'box'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xScaleID%3A%20'x-axis-0'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yScaleID%3A%20'y-axis-0'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xMin%3A%203%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xMax%3A%205%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'rgba(200%2C%20200%2C%20200%2C%200.2)'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20borderColor%3A%20'%23ccc'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+
+
+   <div class="title">Review Count</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A23966%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A23964%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A23962%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A23960%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A23960%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A23959%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A23959%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A23958%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A23957%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A23957%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A23955%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A23954%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A23950%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A23948%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A23948%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A23947%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A23944%7D%2C%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A23939%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23F19292'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(23966%20%2F%2023939%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%2023939)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+   <div class="title">Price</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A%2210.86%22%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A%229.79%22%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A%2210.80%22%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A%229.79%22%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A%228.98%22%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A%226.66%22%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A%229.79%22%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A%2210.80%22%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A%2210.80%22%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A%228.99%22%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A%229.79%22%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A%228.16%22%7D%2C%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A%228.99%22%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23FFEB99'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Amount%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(9.79%20%2F%2010.80%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%2010.80)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+   <div class="title">Teen & Young Adult Fiction about Orphans & Foster Homes Category</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A%2221%22%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A%2221%22%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A%2219%22%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A%2220%22%7D%2C%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A%221%22%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23FF9AA2'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(21%20%2F%201%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%201)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+   <div class="title">Teen & Young Adult Wizards & Witches Fantasy eBooks Category</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A%2259%22%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A%2259%22%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A%2259%22%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A%2257%22%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A%2256%22%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A%2252%22%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A%2252%22%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A%2252%22%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A%2250%22%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A%2250%22%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A%2251%22%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A%2251%22%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A%2251%22%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A%2251%22%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A%2251%22%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A%2254%22%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A%2254%22%7D%2C%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A%221%22%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23F1E9CB'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(59%20%2F%201%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%201)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+   <div class="title">Children's Orphans & Foster Homes Books Category</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A%2262%22%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A%2262%22%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A%2262%22%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A%2262%22%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A%2262%22%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A%2261%22%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A%2261%22%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A%2253%22%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A%2253%22%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A%2260%22%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A%2260%22%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A%2260%22%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A%2264%22%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A%2272%22%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A%2272%22%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A%221%22%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A%2272%22%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A%2273%22%7D%2C%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A%221%22%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23FEC8D8'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(73%20%2F%201%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%201)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+   <div class="title">Amazon Charts Category</div>
+   <img src="https://quickchart.io/chart?width=415&height=150&backgroundColor=white&c=%7B%0A%20%20%20%20%20%20%20%20%20type%3A%20'bar'%2C%0A%20%20%20%20%20%20%20%20%20data%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20data%3A%20%5B%7B%22t%22%3A%222020-07-31%2022%3A07%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-07-31%2023%3A07%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2000%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2001%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2002%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2003%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2004%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2005%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2006%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2007%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2008%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2009%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2010%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2011%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2012%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2013%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2014%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2015%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2016%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2017%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2018%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2019%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2020%3A08%22%2C%22y%22%3A%224%22%7D%2C%7B%22t%22%3A%222020-08-01%2021%3A08%22%2C%22y%22%3A%224%22%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundColor%3A%20'%23FF9AA2'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20minBarLength%3A%204%0A%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20options%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20legend%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20'time'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20distribution%3A%20'series'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20time%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20unit%3A%20'hour'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scaleLabel%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20labelString%3A%20%22Total%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20anchor%3A%20'end'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20align%3A%20'top'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20formatter%3A%20function(value)%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20(4%20%2F%204%20%3E%2030%20%26%26%20value.y%20%3C%205%20*%204)%20%3F%20value.y%20%3A%20%22%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2F%2F%20options%0A%20%20%20%20%20%20%7D">
+</div>
+   
+<div class="footer">
+<hr width="50%" style="margin-top:35px" align="center">
+You received this email because you've purchased the <a href="https://bestsellersrank.me">Best Sellers Rank</a> service.
+<p>
+We want to make this as useful a service as possible for you, so we love getting your ideas and suggestions for improvements. 
+Have an idea? <a href="mailto:info@bestsellersrank.me?subject=I have an idea.">Email us!</a>
+<p>
+Generating these reports is a tricky process. If you find any problems please let us know so we can fix it. <a href="mailto:info@bestsellersrank.me?subject=I have a problem.">Email us!</a>
+<P>
+<span style="font-size:x-small">(prod)</span>
+</div>
+
+</div>
+</center>
+</div>
+</body>
+</html>

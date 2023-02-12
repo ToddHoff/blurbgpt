@@ -1,0 +1,92 @@
+#! /usr/bin/env node
+
+const moment    = require("moment-timezone");
+const AppCfg    = require("../AppCfg");
+const Util      = require("../Util");
+const StatsDto  = require("../StatsDto");
+
+const cfg  = new AppCfg("..");
+
+
+async function get_range(cnt, period, units) {
+
+   const stats = {
+      user_id      : "toddhoffious@gmail.com",
+      url          : "/dp/222222",
+      period        : period,
+      completed_on : moment().utc().toISOString()
+   }
+
+   const dto = new StatsDto(cfg, stats);
+   const records = await dto.getRange(cnt);
+   records.forEach(e => console.log("found record:",e.data));
+
+}// get_range
+
+
+async function get(cnt, period, units) {
+
+   for (let i = 0; i < cnt; i++) {
+      const date = moment().utc().subtract(i, units).toISOString();
+
+      const stats = {
+         user_id      : "toddhoffious@gmail.com",
+         url          : "/dp/222222",
+         period        : period,
+         completed_on : date
+      }
+
+      const dto = new StatsDto(cfg, stats);
+      await dto.get();
+      console.log("get:", dto.data);
+   }
+
+}// get
+
+
+async function create(cnt, period, units) {
+   console.log(`create:cnt:${cnt} period:${period} units:${units}`);
+
+   for (let i = 0; i < cnt; i++) {
+      const date = moment.utc().subtract(i, units).toISOString();
+
+      const stats = {
+         user_id      : "toddhoffious@gmail.com",
+         url          : "https://www.amazon.com/dp/0451524934", 
+         period       : period, 
+         completed_on : date
+      }
+
+      const dto = new StatsDto(cfg, stats);
+      await dto.create("<h1>help</h1>");
+   }
+
+}// create
+
+
+(async () => {
+
+   try {
+      const url = "https://www.amazon.com/dp/B0192CTMYG"; 
+      const period = "daily";
+
+      const stats_dto = new StatsDto(cfg, {url : url, period : period});
+      const exists = stats_dto.get(); 
+
+      //await create(5, "hourly", "hours");
+      //await get(5, "hourly", "hours");
+      //await get_range(8, "hourly", "hours");
+
+      //await create(5, "daily", "days");
+      //await get(5, "daily", "days");
+      //await get_range(8, "daily", "days");
+
+      //await create(5, "weekly", "weeks");
+      //await get(5, "weekly", "weeks");
+      //await get_range(8, "weekly", "weeks");
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

@@ -1,0 +1,261 @@
+<div style="padding-top:5%" class="container-fluid plan-pricing-page">
+
+<div class="plan-pricing-intro">
+   <div class="plan-page-title text-center">Become a Member</div>
+
+   <div class="plan-page-maxim text-center mx-auto mb-4">
+      Keep tabs on how well your book is selling on Amazon.
+   </div>
+
+{{#unless ua}}
+
+   <div class="plan-explainer text-center mx-auto">
+      You're on the <i>{{user.plan.title}}</i>.
+   </div>
+
+   <div class="plan-explainer text-center mx-auto">
+      You've been a member since <i>{{isoToDate user.plan.started_on tz=cfg.tz}}</i>.
+   </div>
+
+{{#if user.plan.expires_on}}
+   <div class="plan-explainer text-center mx-auto">
+{{#if user.subscription_expired}}
+      <b>Your {{subscriptionType user}} plan has expired. Please purchase another plan.</b>
+{{else}}
+      Your {{subscriptionType user}} plan expires on <i>{{isoToDate user.plan.expires_on tz=cfg.tz}}</i>.
+{{/if}}
+   </div>
+{{/if}}
+
+{{/unless}}
+
+</div>
+
+
+{{#each plans}}
+
+
+<div class="plan mt-3">
+
+  <div class="plan-header">
+      <table class="w-100">
+      <tr><td width="50%">
+         <div class="plan-entry-title">{{this.short}}</div>
+         {{#if this.sub}}
+            <div class="plan-entry-subtitle">{{this.sub}}</div>
+         {{/if}}
+
+{{#if this.price}}
+         <div class="plan-entry-price">${{this.price}}/year</div>
+{{else}}
+         <div class="plan-entry-price">Free</div>
+{{/if}}
+
+     </td>
+     <td width="50%" class="plan-header-td" style="text-align:center" valign="top">
+
+{{#unless this.direction}}
+        <a id="click-{{this.type}}" class="btn go-button" role="button">Select Plan</a>
+        <div class="mt-1"><medium>Subscription</medium></div>
+{{/unless}}
+
+{{#if ../ua}}
+
+        <a id="click-{{this.type}}" class="btn go-button" role="button">Select Plan</a>
+        <div class="mt-1"><medium>Subscription</medium></div>
+{{else}}
+
+   {{#ifCond this.direction '==' "disabled"}}
+        <a id="click-{{../this.type}}" disabled href="" class="btn plan-current-btn disabled" role="button">Current Plan</a>
+   {{/ifCond}}
+
+   {{#ifCond this.direction '==' "upgrading"}}
+        <a id="click-{{../this.type}}" class="btn go-button" role="button">Select Plan</a>
+        {{#if ../this.days_added}}
+        <div class="text-muted plan-button-text">New subscription will end {{../this.days_added}} days from today.</div>
+        {{/if}}
+   {{/ifCond}}
+
+   {{#ifCond this.direction '==' "downgrading"}}
+        <a id="click-{{../this.type}}" class="btn go-button" role="button">Select Plan</a>
+        {{#if ../this.days_added}}
+        <div class="text-muted plan-button-text">New subscription will end {{../this.days_added}} days from today.</div>
+        {{/if}}
+   {{/ifCond}}
+
+   {{#ifCond this.direction '==' "problem"}}
+        <a id="click-{{../this.type}}" disabled class="btn plan-unavailable-btn" role="button">Unavailable</a>
+   {{/ifCond}}
+
+{{/if}}
+
+     </td></tr>
+     </table>
+  </div>
+  <hr class="plan-line"/>
+
+  <div class="plan-body">
+
+{{#ifCond this.direction '==' "problem"}}
+  <div class="plan-problem">{{../this.problem}}</div>
+{{/ifCond}}
+
+{{#if this.notice}}
+  <div class="plan-notice">{{this.notice}}</div>
+{{/if}}
+
+
+     <ul class="price-list">
+{{#each this.benefits}}
+        <li class="price-item">{{this}}
+{{/each}}
+     </ul>
+
+     <div class="plan-book-list">
+        <i class="fa fa-book plan-book-icon"></i> <i class="fa fa-book plan-book-icon"></i> <i class="fa fa-book plan-book-icon"></i> 
+        <i class="fa fa-book plan-book-icon"></i> <i class="fa fa-book plan-book-icon"></i>
+     </div>
+
+  </div>
+
+</div> <!--plan-->
+
+{{/each}}
+
+</div> <!--page-->
+
+<div class="mt-4"><center>
+   <p>Any questions? Please visit our <a href="/faq.html" target="_blank">Frequently Asked Questions</a>.</p>
+</center></div>
+
+<script>
+
+$("#paypal-button-container-common").empty();
+
+{{#each plans}}
+   $(document).off("click", "#click-{{this.type}}");
+{{/each}}
+
+{{#each plans}}
+   $(document).on("click", "#click-{{this.type}}", function(event) {
+
+   {{#if ../ua}}
+      return app.showSignUp("{{this.type}}");
+   {{else}}
+
+      {{#ifCond this.direction '==' "downgrading"}}
+         app.paid("{{../this.type}}");
+      {{/ifCond}}
+
+      {{#ifCond this.direction '==' "disabled"}}
+      {{/ifCond}}
+
+      {{#ifCond this.direction '==' "problem"}}
+      {{/ifCond}}
+
+      {{#ifCond this.direction '==' "upgrading"}}
+
+         $("#click-{{../this.type}}").prop("disabled", true);
+         $("#paypal-button-container-common").html("<div class='plan-paypal-title'>You Want the <i>{{../this.title}}</i></div>");
+
+         const params = {
+            style: {
+               size: 'responsive',
+               shape: 'pill',
+               color: 'gold',
+               layout: 'vertical',
+               label: 'buynow'
+            },
+            createOrder: function(data, actions) {
+               $("#spinner").show();
+   
+               return actions.order.create({
+                       purchase_units: [
+                            {
+                                reference_id: "PUHF",
+                                description: "Software Service",
+
+                                custom_id: "CUST-BSR",
+                                soft_descriptor: "Best Sellers Rank",
+                                amount: {
+                                    currency_code: "USD",
+                                    value: "{{../this.price}}",
+                                    breakdown: {
+                                        item_total: {
+                                            currency_code: "USD",
+                                            value: "{{../this.price}}"
+                                        },
+                                        shipping: {
+                                            currency_code: "USD",
+                                            value: "0.00"
+                                        },
+                                        handling: {
+                                            currency_code: "USD",
+                                            value: "0.00"
+                                        },
+                                        tax_total: {
+                                            currency_code: "USD",
+                                            value: "0.00"
+                                        },
+                                        shipping_discount: {
+                                            currency_code: "USD",
+                                            value: "0.00"
+                                        }
+                                    }
+                                },
+                                items: [
+                                    {
+                                        name: "Best Sellers Rank Subscription",
+                                        description: "{{../this.title}}",
+                                        sku: "sku01",
+                                        unit_amount: {
+                                            currency_code: "USD",
+                                            value: "{{../this.price}}"
+                                        },
+                                        tax: {
+                                            currency_code: "USD",
+                                            value: "0.00"
+                                        },
+                                        quantity: "1",
+                                        category: "DIGITAL_GOODS"
+                                    }
+                                ]
+                            }
+                        ]
+                    });
+
+            },
+            onApprove: function(data, actions) {
+               console.log("onapprove:data:", data);
+               return actions.order.capture().then(function(details) {
+                  console.log("Transaction completed:", details);
+                  app.paid("{{../this.type}}", details.id, details.payer.payer_id,  details.purchase_units[0].payments.captures[0].id);
+                  $("#click-{{../this.type}}").prop("disabled", false);
+                  $("#spinner").hide();
+                  $("#paypal-button-container-common").html("");
+               });
+            },
+            onCancel: function() {
+               $("#click-{{../this.type}}").prop("disabled", false);
+               $("#spinner").hide();
+               $("#paypal-button-container-common").html("");
+            }
+         }
+
+         paypal.Buttons(params).render("#paypal-button-container-common");
+         $("html, body").animate({ scrollTop: 0 }, "fast");
+
+      {{/ifCond}}
+   {{/if}}
+
+   })
+
+{{/each}}
+
+{{#if user.signup_plan}}
+{{#ifCond user.signup_plan "!=" "free"}}
+   $("#click-{{../user.signup_plan}}").click();
+{{/ifCond}}
+{{/if}}
+
+</script>

@@ -1,0 +1,40 @@
+#! /usr/bin/env node
+
+const AppCfg         = require("../AppCfg");
+const Util           = require("../Util");
+const PaypalOrderDto = require("../PaypalOrderDto");
+
+(async () => {
+
+   try {
+
+      const cfg = new AppCfg();
+
+/*
+       let dto = new PaypalOrderDto(cfg, {
+                    user_id      : "ted@gmail.com", 
+                    type         : "plan", 
+                    order_id     : "1111", 
+                    payer_id     : "2222", 
+                    capture_id   : "3333",
+                    price        : "99.99", 
+                    order_status : "submitted"
+                 })
+      await dto.create();
+*/
+
+
+      PaypalOrderDto.applyAllByStatus(cfg, "submitted", (cfg, item) => { console.log("ITEM:", item); })
+
+
+      //await dto.remove();
+
+      //dto = new PaypalOrderDto(cfg, { order_id : "1111" });
+      //const found = await dto.get();
+      //console.log("found:", found);
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

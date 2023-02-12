@@ -1,0 +1,38 @@
+#! /usr/bin/env node
+
+const AppCfg   = require("../AppCfg");
+const Util     = require("../Util");
+const Vault    = require("../Vault");
+const StatsDto = require("../StatsDto");
+
+const cfg  = new AppCfg("..");
+
+
+(async () => {
+
+   try {
+
+      const vault = new Vault(cfg);
+
+      //await vault.create("toddhoffious@gmail.com", "/dp/1111", Util.utcNow(), "daily", "page.html", "<h1>html</h1>");
+      //let url = vault.generatePresignedUrl("toddhoffious@gmail.com", "/dp/1111", Util.utcNow(), "daily", "page.html");
+      //console.log(url);
+
+      //await vault.deleteUser("toddho.f.fio.u.s@gmail.com");
+
+      await vault.walkDirectory("products", async (bucket, dir, key) => { 
+        if (! key.endsWith("json")) return;
+        console.log(key); 
+
+        const data = await vault.getByKey(key);
+        console.log(data);
+
+        const stats_dto = new StatsDto(cfg, JSON.parse(data));
+        await stats_dto.create();
+      });
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

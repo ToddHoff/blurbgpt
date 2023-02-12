@@ -1,0 +1,54 @@
+#! /usr/bin/env node
+  
+const UsersDto   = require("./lib/UsersDto");
+const ProductDto = require("./lib/ProductDto");
+const AppCfg     = require("./lib/AppCfg");
+const Plans      = require("./lib/Plans");
+const Util       = require("./lib/Util");
+
+const cfg  = new AppCfg();
+
+const DB_ACTIONS = [
+   {
+      "type": "user",
+      "version": "1",
+      "email": "toddhoffious@gmail.com",
+      "first_name": "Todd",
+      "last_name": "Hoff",
+      "plan": Plans.DEFAULT_FREE_PLAN,
+      "plan_history": []
+   },
+   {
+      "type": "user",
+      "version": "1",
+      "email": "lindagcoleman@gmail.com",
+      "first_name": "Linda",
+      "last_name": "Coleman",
+      "plan": Plans.DEFAULT_FREE_PLAN,
+      "plan_history": []
+   }
+]
+
+
+async function create() {
+
+   DB_ACTIONS.forEach(async function(item) {
+      const user_dto = new UsersDto(cfg, item);
+      await user_dto.create();
+   })
+
+}// create
+
+
+(async () => {
+
+   try {
+
+      await create();
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();
+

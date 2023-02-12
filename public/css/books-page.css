@@ -1,0 +1,109 @@
+
+.btn-danger {
+   padding          : 15px 15px 15px 15px !important;
+   border-radius    : 500px; 
+}
+
+.btn-success {
+   padding          : 15px 15px 15px 15px !important;
+   border-radius    : 500px; 
+}
+
+
+.books-page {
+   background-color : white;
+   padding-top      : 5%;
+   text-align       : center;
+}
+
+.add-button {
+   border           : 1px solid rgba(255,255,255,.7);
+   box-shadow       : 3px 3px 3px 2px rgba(216,216,216,.7);
+   background-color : #7DF9FF; 
+   color            : black;
+   border-radius    : 500px; 
+   font-weight      : normal;
+   font-size        : 6.5vw; 
+   padding          : 10px 15px 10px 15px !important;
+   margin-top       : 10px;
+}
+
+.upgrade-button {
+   border           : 1px solid rgba(255,255,255,.7);
+   box-shadow       : 3px 3px 3px 2px rgba(216,216,216,.7);
+   background-color : #E0BBE4; 
+   color            : black;
+   border-radius    : 500px; 
+   font-weight      : normal;
+   font-size        : 6.5vw; 
+   padding          : 10px 15px 10px 15px !important;
+}
+
+.book-add {
+   padding-top      : 15px;
+   padding-bottom   : 0px;
+   padding-left     : 15px;
+}
+
+.book-nick-link:visited {
+   color            : black !important;
+}
+
+.book-show-info {
+   color            : #323a4e !important;
+   font-size        : 4.5vh;
+}
+
+.book-show-trash {
+   color            : #dc3545 !important;
+   font-size        : 2.5vh;
+}
+
+.book-limit {
+   width            : 90%;
+   font-style       : italic;
+   padding-top      : 10px;
+   padding-bottom   : 0px;
+   font-size        : 2.0vh;
+}
+
+.book-plan-status {
+   font-size        : 1.75vh; 
+}
+
+.bookedit-thead {
+   background-color : #d2ebef;
+   background-color : #E0FFFF;
+   color            : black;
+}
+
+.bookedit-table td {
+   font-size        : 4.50vw; 
+}
+
+.bookedit-table th {
+   font-size        : 4.50vw; 
+}
+
+@media only screen and (min-width: 375px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+   .add-button {
+      font-size        : 4.0vw; 
+   }
+
+   .upgrade-button {
+      font-size        : 4.0vw; 
+   }
+
+   .book-plan-status {
+      font-size        : 2.00vh; 
+   }
+}
+
+@media only screen and (min-width: 768px) {
+
+}

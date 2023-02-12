@@ -1,0 +1,26 @@
+#! /usr/bin/env node
+
+const AppCfg   = require("../AppCfg");
+const Util     = require("../Util");
+const UsersDto = require("../UsersDto");
+
+(async () => {
+
+   try {
+
+      const cfg = new AppCfg();
+
+      const dto = new UsersDto(cfg, { email: "toddhoffiou.s@gmail.com" });
+      if (await dto.get() == null) throw Error("Unknown user");
+
+      console.log("USER:", dto.data);
+
+      console.log("COUNT:", dto.getHourlyCnt());
+
+      //await dto.remove();
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();

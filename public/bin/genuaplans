@@ -1,0 +1,31 @@
+#! /usr/bin/env node
+
+const fs     = require('fs');
+const Path   = require('path');
+const moment = require("../../lambda/lib/node_modules/moment-timezone");
+
+const AppCfg = require("../../lambda/lib/AppCfg");
+const Plans  = require("../../lambda/lib/Plans");
+const Util   = require("../../lambda/lib/Util");
+const ApplyDataTemplate  = require("../../lambda/lib/ApplyDataTemplate");
+
+const CFG    = new AppCfg(__dirname);
+const PLANS  = new Plans();
+
+try {
+
+   const schedule = PLANS.calcNewPlanSchedule({ "type" : "free"});
+
+   const path = Path.join("../../lambda/api", 'views', "plans-page.hbs");
+   const html = ApplyDataTemplate(path, {
+      cfg   : CFG,
+      ua    : true,
+      plans : schedule
+   });
+
+   fs.writeFileSync("../uapricing.html", html); 
+
+} catch (error) {
+   console.log("error:" + error);
+   console.log("error:" + error.stack);
+}

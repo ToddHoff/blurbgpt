@@ -1,0 +1,43 @@
+#! /usr/bin/env node
+
+const fs     = require('fs');
+const Path   = require('path');
+const moment = require("../lib/node_modules/moment-timezone");
+
+const AppCfg = require("../lib/AppCfg");
+const Plans  = require("../lib/Plans");
+const Util   = require("../lib/Util");
+
+const CFG    = new AppCfg(__dirname);
+const PLANS  = new Plans();
+
+try {
+
+   let user = { 
+      plan : {
+         title : "10 Plan",
+         type : "plan2",
+         //title : "Free Plan",
+         //type : "free",
+         started_on : moment().subtract(1, 'month').toISOString(), 
+         expires_on : moment().add(2, 'month').toISOString(), 
+         ppd: .07
+      },
+   }
+
+   let schedule = PLANS.calcNewPlanSchedule(user.plan, 6);
+   schedule = schedule.slice(1);
+   console.log(schedule);
+
+   const path = Path.join("../", 'views', "plans-page.hbs");
+   const html = Util.applyDataTemplate(path, {
+      cfg   : CFG,
+      user  : user,
+      plans : schedule
+   });
+
+   fs.writeFileSync("pricing.html", html); 
+
+} catch (error) {
+   console.log("error:" + error);
+}

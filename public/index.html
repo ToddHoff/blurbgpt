@@ -1,0 +1,1538 @@
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Best Sellers Rank - Track How Your Books Perform on Amazon</title>
+
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/mdb.min.css">
+   <link href="css/addons/datatables.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="/css/app.css"> 
+   <link rel="stylesheet" href="/css/books-page.css"> 
+   <link rel="stylesheet" href="/css/plans-page.css"> 
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-custom">
+
+   <a class="navbar-brand" href="/index.html">
+      <div class="navbar-brand-name">
+         <img class="logo-img" src="/img/logo.png">
+         <span class="align-middle">Best Sellers Rank</span>
+      </div>
+   </a>
+
+   <ul class="nav navbar-nav mx-auto">
+      <li class="nav-item">
+         <a href="/show-plans" class="btn noplan routable nav-button">Pricing</a>
+      </li>
+      <li class="nav-item">
+         <a href="/show-books" class="btn hasplan d-none routable nav-button">Books</a>
+      </li>
+   </ul>
+
+   <a href="" data-activates="slide-out" class="button-collapse base-icon">
+      <span id="userrep"><i class='fas fa-bars fa-1x'></i></span>
+   </a>
+
+   <span id="spinner" class="spinner-border text-primary hidden" role="status">&nbsp;&nbsp;</span>
+</nav>
+
+
+<div id="slide-out" class="side-nav2 side-nav-light">
+
+    <ul class="custom-scrollbar">
+      <li class="">
+         <a href="/show-books" class="waves-effect nav-link side-nav-link onlogin routable">Books</a>
+      </li>
+      <li class="">
+         <a href="/show-plans" class="waves-effect nav-link side-nav-link routable">Pricing</a>
+      </li>
+      <li class="onlogout">
+         <a href="/show-signup" class="waves-effect nav-link side-nav-link routable">Sign Up</a>
+      </li>
+      <li class="onlogout">
+         <a href="/show-login" class="waves-effect nav-link side-nav-link routable">Log In</a>
+      </li>
+      <li class="onlogin">
+          <a href="/show-profile" class="waves-effect nav-link side-nav-link routable hide-on-expired">Profile</a>
+      </li>
+      <li class="nav-item onlogin">
+          <a href="/logout" id="logout-btn" class="waves-effect nav-link side-nav-link routable">Log Out </a>
+      </li>
+      <li>
+         <a href="mailto:info@bestsellersrank.me?subject=I have a question" class="waves-effect nav-link side-nav-link">Contact Us</a>
+      </li>
+
+      <li>
+         <a href="/amazonsalesrank.html" class="waves-effect nav-link side-nav-link" target="_blank"><small>Sales Rank Explained</small></a>
+      </li>
+
+      <li>
+         <a class="waves-effect nav-link side-nav-link" href="/tos.html" target="_blank"><small>Terms of Service</small></a>
+      </li>
+      <li>
+         <a class="waves-effect nav-link side-nav-link" href="/privacy.html" target="_blank"><small>Privacy Policy</small></a>
+      </li>
+
+      <li>
+         <a class="waves-effect nav-link side-nav-link" href="/faq.html" target="_blank"><small>FAQ</small></a>
+      </li>
+    </ul>
+
+
+    <div class="sidenav-bg rgba-cyan-strong"></div>
+</div> <!--/. Sidebar navigation -->
+
+<center><div class="container-fluid text-center plan-paypal-container" id="paypal-button-container-common"></div></center>
+
+<main id="main" class="">
+
+   <div class="page-intro">
+      <center><div class="page-title">Track How Your Books Perform on Amazon</div></center>
+      <center><div class="page-title">Any marketing tactic where you don't measure results is useless.</div></center>
+   </div>
+
+<div class="row">
+<div class="col">
+
+<div>
+    <div class="row justify-content-center">
+        <div class="sj-card"> 
+        	<div class="card">
+        		<div class="card-body">
+        			<ul class="chat-list">
+        				<li class="in">
+        					<div class="chat-body">
+        						<div class="chat-message">
+        						   <img class="chat-img chat-img-in" alt="Avtar" src="/img/willavatar.jpg"">
+        						   <p>Hey J, my new ad really works! My ✍️  earned 💯 new &#11088;&#11088;&#11088;&#11088;&#11088; reviews and now ranks 🏆 in the Amazon Store!</p>
+        						</div>
+        					</div>
+        				</li>
+        				<li class="out">
+        					<div class="chat-body">
+        						<div class="chat-message">
+        						   <img class="chat-img chat-img-out" alt="Avtar" src="/img/janeavatar.jpg">
+        						   <p>&nbsp;&nbsp;How do you know ☝️  Willy?</p>
+        						</div>
+        					</div>
+        				</li>
+        				<li class="in">
+        					<div class="chat-body">
+        						<div class="chat-message">
+        						   <img class="chat-img chat-img-in" alt="Avtar" src="/img/willavatar.jpg">
+        						   <p>Best Sellers Rank @ <a href="https://bestsellersrank.me" style="color:white">bestsellersrank.me</a> sends me reports every day on how my books are doing. &#128525;</p>
+        						</div>
+        					</div>
+        				</li>
+        				<li class="out">
+        					<div class="chat-body" style="width:80%">
+        			   		   <div class="chat-message">
+        					      <img class="chat-img chat-img-out" alt="Avtar" src="/img/janeavatar.jpg">
+        					      <p>&nbsp;&nbsp;Every 🕶️ author must be in want of Best Sellers Rank.</p>
+        			                   </div>
+        					</div>
+        				</li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+</div>
+
+      <center><div>
+         <a href="/show-tryit" class="btn small-go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </div></center>
+
+<div class="col mt-2">
+<div class="card mt-4">
+
+   <div class="card-body">
+      <p><span class="product-name">Best Sellers Rank</span> is a service that tracks how books perform on Amazon. It periodically (hourly, daily, or weekly) collects
+      and sends easy-to-read key performance indicator reports for all your Amazon books.</p>
+
+      <p><span class="product-name">Best Sellers Rank</span> is great for...</p>
+      <ul class="checklist mb-4">
+      <li class="checkitem"><b>Knowing how your books are doing</b>. You get the sales rank, review count, ratings—and much more—for each book, sent to you. 
+          Stop obsessively checking Amazon. Let Best Sellers Rank do it for you!
+      <li class="checkitem"><b>Learning which promotional strategies improve sales</b>. Probably 20% of your promotional efforts generate 80% of your sales. 
+          Which convert the best? By tracking sales rank you know which of the promotions you do actually result in sales.
+      <li class="checkitem"><b>Answering questions like:</b> Would I be better off writing or promoting? A few books usually generate most sales.
+          Which genres sell the best for me? Should I write more of one genre because it's selling better? How is my competition doing?
+      </ul>
+
+      <p><a type="button" class="btn btn-danger view-button mt-4" href="/examples/report_1.html" target="_blank">Show Me!</a> an example email report.</p>
+
+      <center><div id="carousel-report" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="view">
+              <img class="d-block " src="/img/slides/intro.jpg" alt="Intro slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+              <img class="d-block " src="/img/slides/summary.jpg" alt="Summry" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/stats.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/currank.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/split.jpg" alt="Split slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/currank2.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/curchange.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/cot.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/cot2.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/storerank.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/price.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/rev.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/cat1.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/cat2.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="view">
+              <img class="d-block" src="/img/slides/charts.jpg" alt="Third slide" style="height:300px !important;">
+              <div class="mask rgba-black-light"></div>
+            </div>
+          </div>
+        </div>
+      </div></center>
+
+     <center><div class="intro-detail">Today is a Terrific Day to Start Tracking Your Books</div></center>
+      <center>
+         <a href="/show-tryit" class="btn go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </center>
+   </div> <!--card-body-->
+</div> <!--card-->
+
+</div> <!--col-->
+
+
+<div class="col mt-2">
+<div class="card">
+
+   <div class="card-body-title">In Each Report See...</div>
+
+   <div class="card-body mt-0">
+     <div class="subtitle-container mt-0"><span class="subtitle">What's Happening Now</span></div>
+
+     <ul class="checklist">
+     <li class="checkitem">A quick summary of your book's sales rank in the store, review total, review average, and price.
+     <li class="checkitem">Current rankings in each category.
+     <li class="checkitem">Current review count. Review counts are useful because reviews are a proxy for sales.
+                           And by looking at the relative proportions you can calculate readthrough percentages.
+     </ul>
+
+     <div class="subtitle-container"><span class="subtitle">What's Changed</span></div>
+
+      <ul class="checklist">
+      <li class="checkitem">Has your sales rank gone up or down?
+      <li class="checkitem">Has your book been placed in a new category or deleted from a category?
+      <li class="checkitem">Has your review count gone up?
+      <li class="checkitem">Has your ratings gone up or down?
+      <li class="checkitem">Has the book price gone up or down?
+      <li class="checkitem">Has the description changed?
+      </ul>
+
+     <div class="subtitle-container"><span class="subtitle">Trends</span></div>
+
+      <ul class="checklist">
+      <li class="checkitem">How your book performs over time with graphs for changes in sales rankings, price, reviews, and for each category. 
+      <li class="checkitem">When your sales rank as been consistent over a stretch of time. Amazon loves that.
+      </ul>
+
+     <div class="subtitle-container"><span class="subtitle">Before & After Splits</span></div>
+
+      <img src="/img/slides/split.jpg">
+      <p class="mt-4">
+      A split is any event (ad, new cover, new blurb, etc.) for which you want to measure performance before and after the event. For example,
+      when you create an Amazon ad, add a split. Then you can compare sales rank before and after the ad.
+      </p>
+
+     <div class="subtitle-container"><span class="subtitle">Best Selling Books</span></div>
+
+      <p>
+      Every week a report is sent to you showing which of your books are selling the best and in which categories they are
+      selling the best. With this information you can decide where to invest going forward:</p>
+      <ul class="checklist mt-0 pt-0">
+      <li class="checkitem">Which promotional efforts actually worked? Do you want to do more of those?
+      <li class="checkitem">Which of your books perform the best? Do you want to write more of those?
+      <li class="checkitem">Which categories do your books perform the best in? Do you want to write more to market?
+      </ul>
+
+      <img class="mt-4" src="/img/summary.png">
+
+      <p class="mt-4">It doesn't stop there. We'll keep adding information that will help your author business succeed.</p>
+
+      <center>
+         <a href="/show-tryit" class="btn go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </center>
+      
+   </div> <!--card-body-->
+</div> <!--card-->
+
+</div>
+
+<div class="col mt-2">
+
+<div class="card">
+
+   <div class="card-body">
+
+      <div class="card-body-title">Are You Profiting?</div>
+
+      <blockquote>
+      Armed with knowledge of which promotion efforts have led to sales, you can plan how best to spend your time and money promoting your book...By tracking my sales, I have learned that the warning we’ve heard is absolutely true. As a self-published author, you have to continually market your book. When you don’t, sales stagnate. You don’t have to look far for the numbers that prove it.  -- <a href="https://www.wow-womenonwriting.com" target="_blank">Laurie Lewis</a>
+      </blockquote>
+
+      <p>People are reading more than ever. Are your promotional strategies convincing them to read more of your books?</p>
+
+      <p>How would you even know? Attribution is hard. One way is by tracking your <b>sales rank</b>.</p>
+
+      <p>
+         Why is tracking your <a href="/amazonsalesrank.html" target="_blank">sales rank</a> so valuable? It tells your Amazon story. 
+      </p>
+
+      <p>
+         Sales rank is the key component behind the algorithm powering the Kindle Store.
+      </p>
+
+      <p>
+         Sales rank is Amazon's measure of how well your book is selling. It also tells Amazon how much effort it should put into promoting your book. 
+      </p>
+
+      <p>
+         When sales rank goes down, you're selling less and Amazon cares less. When sales rank goes up, you're selling more and Amazon cares more. 
+      </p>
+
+      <p>
+         You want Amazon to care about your book because that causes Amazon's algorithm to sell <i>your books</i> for you—which means tracking 
+         your sales rank so you know which promotions work and which don't.
+      </p>
+
+      <p>
+         In a week, today's book sale will count almost nothing towards your sales rank. Do nothing and your rank will fall...unless you 
+         do something to increase it. 
+      </p>
+ 
+      <p>
+         Ideally, you want four or five days of consistently rising sales. This will cause Amazon's recommendation 
+         algorithm to start working for you. 
+      </p>
+
+      <p>
+         Not tracking your sales rank? Then millions of constantly promoting authors will leapfrog over you.
+      </p>
+
+      <div class="subtitle-container"><span class="subtitle">Tracking sales rank helps you succeed because you see the results of your actions:</span></div>
+
+      <ul class="checklist mt-0 pt-0">
+      <li class="checkitem">Did your new ad campaign boost sales?
+      <li class="checkitem">Are your ads working or should you terminate them? 
+      <li class="checkitem">Did your new blurb get the ball rolling?
+      <li class="checkitem">Did adding new categories make a difference?
+      <li class="checkitem">Did your new cover increase sales? 
+      <li class="checkitem">Is that new deal, price point, or pricing strategy lifting sales?
+      <li class="checkitem">Is your box set a knockout?
+      <li class="checkitem">Is going wide narrowing sales? 
+      <li class="checkitem">Did your email blast light a fire?
+      <li class="checkitem">Are you receiving the royalty checks you deserve? Don't let your publisher bamboozle you into thinking your book isn't selling. Don't trust, verify.
+      <li class="checkitem">How is Kindle performing compared to Hardcover or Audible?
+      <li class="checkitem">Is your backlist selling?
+      <li class="checkitem">Did that list swap convert?
+      <li class="checkitem">Is your review team on the job?
+      <li class="checkitem">Did making the first book in a series permafree entice new buyers?
+      <li class="checkitem">Did a promotional appearance move the needle?
+      <li class="checkitem">Did promo stacking stack up?
+      <li class="checkitem">Is your reader magnet attracting readers?
+      <li class="checkitem">Did that class you attended up your game?
+      <li class="checkitem">Are your pre-orders thriving?
+      <li class="checkitem">Is your book funnel circling the drain?
+      <li class="checkitem">Did your launch strategy rocket sales?
+      <li class="checkitem">Is your book bundle warm and toasty?
+      <li class="checkitem">Is your marketing driving traffic?
+      <li class="checkitem">Did increasing per click bids press your buttons?
+      <li class="checkitem">How are your competitors performing? You don't have to monitor just your books. You can keep an eye on your competitors too. Smart!
+      </ul>
+
+      <p>Do you have any of these questions about any of your books?</p>
+
+      <p>How will you know the answers unless you track your sales rank with <span class="product-name">Best Sellers Rank</span>? Take control of your own future.</p>
+      <p>Take control of your own future.</p>
+
+      <center><div class="intro-detail">Better Information = Smarter Decisions = Increasing Sales</div></center>
+
+      <center>
+         <a href="/show-tryit" class="btn go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </center>
+
+   </div> <!--card-body-->
+</div> <!--card-->
+
+<div class="col mt-2">
+
+<div class="card">
+
+   <div class="card-body">
+
+      <div class="card-body-title">What kind of books should I write?</div>
+
+      <p>Probably 20% of your books generate 80% of your sales. Which brings up a lot of questions:</p>
+
+      <ul class="checklist mt-0 pt-0">
+      <li class="checkitem">Which of the genres do you write in that sell the best?
+      <li class="checkitem">Which book categories sell the best? 
+      <li class="checkitem">Would it be better to write another book in an existing series or start a new series?
+      <li class="checkitem">Does writing to market work for you?
+      <li class="checkitem">Does not writing to market work for you?
+      </ul>
+
+      <p>By tracking sales rank you can tell where you should put your effort to generate the most sales.</p> 
+
+      <center>
+         <a href="/show-tryit" class="btn go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </center>
+
+   </div> <!--card-body-->
+</div> <!--card-->
+
+
+<div class="col mt-2">
+
+<div class="card">
+
+   <div class="card-body-title">What is Best Sellers Rank's origin story?</div>
+
+   <div class="card-body">
+
+      <p>I’m an author and I found myself obsessively checking Amazon to see how my book was doing. You know what I mean. Was anyone reading my book?
+      Was anyone reviewing my book? Was anyone paying any attention at all?</p>
+
+      <p>And I had deeper questions too. When I started an ad campaign, did my sales rank improve? Did I get more reviews? Were my promotions working at all?</p>
+      
+      <p>I’m also a programmer, so I thought why not create a service so I didn’t have to waste time on Amazon? I did and it works great. 
+      I’m hoping Best Sellers Rank is a service others will find useful too.</p>
+
+      <center>
+         <a href="/show-tryit" class="btn go-button routable" role="button">Start Sending My Free Reports</a>
+         <div class="tryit">Try for free. No credit card required.</div>
+      </center>
+
+   </div> <!--card-body-->
+</div> <!--card-->
+
+
+</div> <!--col-->
+
+
+<div class="col mt-2">
+
+<div class="card">
+
+   <div class="card-body-title">My Free Offer for You</div>
+
+   <div class="card-body">
+
+      <p>
+        <a href="/show-tryit" class="routable">Sign up</a> now for the one book free plan. I'll send you daily reports for one book 
+        with no obligation at all. I want you to experience how great it feels when information about your books effortlessly comes to you.
+      </p>
+
+      <p>
+         At any time you can choose to upgrade your plan or cancel your plan. The choice is always yours.</p>
+
+      <center>
+         <a href="/show-plans" type="button" class="btn go-button mb-3 routable" href="">See Pricing Plans</a>
+      </center>
+   </div> <!--card-body-->
+</div> <!--card-->
+
+</div> <!--col-->
+
+
+</div>
+
+
+</div> <!--row-->
+
+</main>
+
+
+<script id="splits-page" type="text/x-handlebars-template">
+
+   <div class="show-splits-title">{{title splits.url}}</div>
+
+   <div class="book-add">
+      <a href="/show-split-add?url={{splits.url}}" id="show-splitadd-button" class="btn add-button routable">Add Split</a>
+
+      <a class="ml-3 mt-3 toggle-bool" data-toggle="collapse" href="#show-split-help">
+        <i>Toggle Help</i>
+      </a>
+   </div>
+
+   <div class="toggle-help ml-3 collapse" id="show-split-help">
+      <p>A split is any event (ad, new cover, new blurb, etc.) for which you want to measure performance before and after the event. For example,
+      when you create an Amazon ad for a book on a specic date, add a split for the ad. Then we can compare sales
+      rank (and other metrics) before and after the ad. Your reports will show the splits so you can determine the effectiveness 
+      of an ad. </p>
+   </div>
+
+   <div class="container-fluid books-page">
+
+   <div class="book-plan-status">
+     Shows a few days of splits. 
+   </div>
+
+   <div class="table-responsive">
+   <table id="splits-list-table" class="table table-sm table-bordered bookedit-table">
+
+      <thead class="bookedit-thead">
+         <tr>
+           <th class="th-sm text-center">Split</th>
+           <th class="th-sm text-center">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+
+   {{#each splits.items}}
+
+         <tr class="">
+            <td class="align-middle text-center">
+               {{name}}
+            </td>
+            <td class="align-middle text-center">
+               {{created_on}}
+               &nbsp;
+               <a href="/split-delete?url={{url}}&created_on={{created_on}}&name={{name}}" 
+                  data-verify-msg="Are you sure you want to delete this split?" class="verify book-show-trash">
+                  <i class="fas fa-trash"></i>
+               </a>
+            </td>
+         </tr>
+   
+   {{/each}}
+
+      </tbody>
+   </table>
+   </div>
+
+   </div> <!--page-->
+
+</script>
+
+
+<script id="books-page" type="text/x-handlebars-template">
+
+   <div class="book-add">
+
+   {{#ifCond products.length "<" plan.qty}}
+
+      {{#unless ../subscription_expired}}
+      <a href="/show-book-add" class="btn add-button routable">Add Book</a>
+
+      <a class="ml-3 mt-3" data-toggle="collapse" href="#show-book-help">
+         <i>Toggle Help</i>
+      </a>
+
+      <div class="toggle-help ml-3 collapse" id="show-book-help">
+         <p>To add a new book press the <i>Add Book</i> button. </p>
+         <p>To change the nickname of a book or change its reporting period press the <i>Edit</i> link. </p>
+         <p>To delete a book <i>Edit</i> the book and press the <i>Delete this Book?</i> link.</p>
+         <p>To see the book on Amazon press the book's nickname, it's a link.</p>
+         <p>To see the latest data collected on a book press the <i>info</i> link under the nickname.</p>
+         <p>To add a split, which is an event you want to see before and after sales rank data for, press the <i>Splits</i> link.</p>
+         <p>To never see this help again press the <i>Toggle Help</i> link.</p>
+      </div>
+
+      {{/unless}}
+
+      <div class="book-limit"> 
+
+         {{#ifCond ../products.length "<=" 0}}
+            Welcome! Looks like you need a book to track. Press the <b>Add Book</b> button and let's get started! 
+         {{/ifCond}}
+
+      </div>
+
+   {{else}}
+   
+      <a href="/show-plans" class="btn upgrade-button routable" style="color:black">Upgrade Plan</a>
+
+      <div class="book-limit"> 
+         You are at your plan limit of {{../plan.qty}} book(s). To add a book please delete an existing book or 
+         even better: <a href="/show-plans" class="routable"  data-target=".navbar-collapse.show">upgrade your plan</a>.
+      </div>
+
+   {{/ifCond}}
+
+   </div> <!--add-->
+
+   <div class="container-fluid books-page">
+
+   <div class="book-plan-status">
+   {{#if subscription_expired}}
+      Your plan has expired. You can still delete books to fit under lower a plan.
+   {{else}}
+      {{plan.title}}. {{products.length}}/{{plan.qty}} limit. {{hourly_cnt}}/{{plan.hourly_qty}} hourly.  
+      &nbsp;<a href="/show-plans" class="routable">Upgrade</a>
+   {{/if}}
+   </div>
+
+   <div class="table-responsive">
+   <table id="bookedit-list-table" class="table table-sm table-bordered bookedit-table w-100">
+
+      <thead class="bookedit-thead">
+         <tr>
+           <th class="th-sm text-center" style="">Name</th>
+           <th class="th-sm text-center" style="width:20%">Data</th>
+           <th class="th-sm text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+   {{#each products}}
+
+         <tr>
+            <td class="align-middle text-center">
+               <table style="border-collapse:collapse;width:100%;padding:0;margin:0"> 
+               <tr>
+                  <td class="text-center" style="vertical-align:middle;border:none">
+                     <u><a href="{{url}}" target="_blank" class="book-nick-link">{{nick}}</a></u>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="text-center" style="vertical-align:middle;border:none">
+                     <a href="/show-book?url={{url}}" class="routable book-show-info"><i class="fas fa-info-circle"></i></a>
+                  </td>
+               </tr>
+               </table>
+            </td>
+
+            <td class="align-middle text-center">
+
+               <table style="border-collapse:collapse;width:100%;padding:0;margin:0"> 
+               <tr>
+                  <td class="text-center" style="vertical-align:middle;border:none">
+   {{#ifCond period "==" "hourly"}}
+               <i class="fas fa-clock">&nbsp;</i>Hourly
+   {{/ifCond}}
+   {{#ifCond period "==" "daily"}}
+               <i class="fas fa-calendar-day">&nbsp</i>Daily
+   {{/ifCond}}
+   {{#ifCond period "==" "weekly"}}
+               <i class="fas fa-calendar-week">&nbsp;</i>Weekly
+   {{/ifCond}}
+                  </td>
+               </tr>
+               <tr>
+                  <td class="text-center" style="vertical-align:middle;border:none">
+                     {{#if last_stats}}
+                        {{numFmt last_stats.sales_rank}}
+                     {{/if}}
+                  </td>
+               </tr>
+               </table>
+
+            </td>
+
+            <td class="align-middle text-center">
+
+               <table style="border-collapse:collapse;width:100%;padding:0;margin:0"> 
+                  <tr>
+                     <td class="text-center" style="vertical-align:middle;border:none;width:50%">
+                        {{#if ../subscription_expired}}
+                        {{else}}
+                           <u><a href="/show-book-edit?url={{url}}" class="routable" style="background-color:{{statusToColor verify_status}}">Edit</i></a></u>
+                        {{/if}}
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="text-center" style="vertical-align:middle;border:none;" style="width:50%">
+                        {{#ifCond period "!==" "hourly"}}
+                           {{#if ../subscription_expired}}
+                           {{else}}
+                              <u><a href="/show-splits?url={{../url}}" class="routable">Splits</i></a></u>
+                           {{/if}}
+                        {{/ifCond}}
+                     </td>
+                  </tr>
+               </table>
+
+             </td>
+         </tr>
+   
+   {{/each}}
+
+      </tbody>
+   </table>
+   </div>
+
+   </div> <!--page-->
+
+</script>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">Log In</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="login-form">
+
+           <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <label for='email'>Email:</label>
+              <input 
+                 type="email" 
+                 class="form-control" 
+                 id="login-email" 
+                 name="login-email" 
+                 required>
+            </div>
+         
+            <i class="fas fa-key">&nbsp;</i><label for='password'>Password:</label>
+            <div class="input-group">
+               <input 
+                  type="password" 
+                  class="form-control pwd" 
+                  id="login-password" 
+                  name="login-password" 
+                  minlength="7"
+                  required>
+               <div class="input-group-append">
+                  <span class="input-group-text reveal" type="button"><i class="fas fa-eye"></i></button>
+               </div>  
+            </div>
+            <span class="help-block">Must be at least seven characters long.</span>
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button id="login-submit-button" type="submit" form="login-form" class="btn submit-button">Log In</button>
+      </div>
+
+      <center>
+      <p><a href="/show-forgot" class="routable" data-toggle="collapse" data-target=".navbar-collapse.show">Forgot Password?</a></p>
+      </center>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 id="signup-title" class="modal-title">Sign Up</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="signup-form">
+
+           <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <label for='email'>Email:</label>
+              <input 
+                 type="email" 
+                 class="form-control" 
+                 name="signup-email" 
+                 id="signup-email" 
+                 aria-describedby="emailHelp" 
+                 required autofocus>
+              <span class="help-block">Reports are sent to this address.</span>
+            </div>
+         
+            <i class="fas fa-key">&nbsp;</i><label for='password'>Password:</label>
+            <div class="input-group">
+               <input 
+                  type="password" 
+                  class="form-control pwd" 
+                  name="signup-password" 
+                  id="signup-password" 
+                  minlength="7"
+                  required>
+               <div class="input-group-append">
+                  <span class="input-group-text reveal" type="button"><i class="fas fa-eye"></i></button>
+               </div>  
+           </div>
+           <span class="help-block">Must be at least seven characters long.</span>
+
+           <div class="mt-3">
+           <i class="fas fa-link"></i>&nbsp;<label id="signup-url-label">Free Amazon.com Book URL:</label>
+           <div class="input-group">
+             <input
+                type="text"
+                name="signup-url",
+                id="signup-url",
+                class="form-control" 
+                style="text-transform:uppercase"
+                placeholder="B0192CTMYG">
+             <span id="signup-url-help" class="help-block">
+               Which book do you want to track? Leave empty if none. 
+               Or enter the Amazon URL or the ASIN (i.e.B079ZYWJJ8).
+             </span>
+
+             <input type="hidden" id="signup-plan" value="">
+           </div>
+           </div>
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button id="signup-submit" type="submit" form="signup-form" class="btn submit-button">Sign Up</button>
+      </div>
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">Profile</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="profile-form">
+
+            <div class="form-group">
+              <label for='first'>First Name:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="profile-first" 
+                 name="profile-first" 
+                 required autofocus>
+            </div>
+         
+            <div class="form-group">
+              <label for='last'>Last Name:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="profile-last" 
+                 name="profile-last" 
+                 required>
+            </div>
+
+            <div class="form-group">
+              <label for='email'>Email:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="profile-email" 
+                 name="profile-email" 
+                 readonly>
+               <span class="help-block">Your email address can't be changed.</span>
+            </div>
+
+           <div class="form-group">
+
+              <div class="btn-group btn-group-toggle btn-group-justified w-100" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="profile-subscription" id="profile-subscription-yes" value="yes" required> 
+                     Yes
+                </label>
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="profile-subscription" id="profile-subscription-no" value="no" required> 
+                     No
+                </label>
+              </div>
+              <center>
+                 <span class="help-block">Auto-renew subscription?</span>
+              </center>
+
+           </div>
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button type="submit" form="profile-form" class="btn submit-button">Save Profile</button>
+      </div>
+
+      <div class="onlogin profile-ops">
+         <p><a href="/show-change-password" class="routable hide-on-expired">Change Password </a></p>
+         <p><a href="/user-delete"  data-verify-msg="Are you sure you wan't to delete your account? Any money you've paid for your subscription will be lost." class="verify">Delete Your Account?</a></p>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">Forgot Password</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <p>
+         A verification code will be sent to your email address. It could take a few minutes. 
+         Check your spam folder if it hasn't arrived. When the code arrives return here and enter 
+         it along with your new password. After that you'll be able to log in once again.
+         </p>
+
+         <form id="forgot-form">
+            <div class="form-group">
+               <i class="fas fa-envelope"></i>
+               <label for='email'>Login email:</label>
+               <input 
+                  type="email" 
+                  class="form-control" 
+                  id="forgot-email" 
+                  name="forgot-email" 
+                  required autofocus>
+                <span class="help-block">Enter the email address you use to login with.</span>
+            </div>
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button type="submit" form="forgot-form" class="btn submit-button">Send Code</button>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">Verify Code</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <P>When the verification code arrives in your email please enter it below.</P>
+
+         <P>
+         Didn't receive a code? Check your spam folder. Or maybe the wrong email address was entered.
+         If it never arrives please try again.
+         </P>
+
+         <form id="verify-form">
+
+            <div class="form-group">
+               <i class="fas fa-envelope"></i>
+               <label for='email'>Login email:</label>
+               <input 
+                  type="email" 
+                  class="form-control" 
+                  id="verify-email" 
+                  name="verify-email" 
+                  required autofocus>
+                <span class="help-block">Reenter your login email address.</span>
+             </div>
+          
+             <div class="form-group">
+               <i class="fas fa-code"></i>
+               <label for='code'>Verification code:</label>
+               <input 
+                  type="text" 
+                  class="form-control" 
+                  id="verify-code" 
+                  name="verify-code" 
+                  required>
+                <span class="help-block">Enter the code you received via email.</span>
+             </div>
+          
+            <i class="fas fa-key">&nbsp;</i><label for='password'>Password:</label>
+            <div class="input-group">
+                <input 
+                   type="password" 
+                   class="form-control pwd" 
+                   id="verify-password" 
+                   name="verify-password" 
+                   minlength="7"
+                   required>
+               <div class="input-group-append">
+                  <span class="input-group-text reveal" type="button"><i class="fas fa-eye"></i></button>
+               </div>  
+             </div>
+             <span class="help-block">Must be at least seven characters long.</span>
+          
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button type="submit" form="verify-form" class="btn submit-button">Change Password</button>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title">Change Password</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="change-form">
+
+            <i class="fas fa-key"></i>&nbsp;<label for='password'>Old password:</label>
+            <div class="input-group">
+                <input 
+                   type="password" 
+                   class="form-control pwd" 
+                   id="change-old-password" 
+                   name="change-old-password" 
+                   minlength="7"
+                   required>
+               <div class="input-group-append">
+                  <span class="input-group-text reveal" type="button"><i class="fas fa-eye"></i></button>
+               </div>  
+            </div>
+            <span class="help-block">Must be at least seven characters long.</span>
+
+            <p>&nbsp;</p>
+
+            <i class="fas fa-key"></i>&nbsp;<label for='password'>New password:</label>
+            <div class="input-group">
+               <input 
+                  type="password" 
+                  class="form-control pwd" 
+                  id="change-new-password" 
+                  name="change-new-password" 
+                  minlength="7"
+                  required>
+               <div class="input-group-append">
+                  <span class="input-group-text reveal" type="button"><i class="fas fa-eye"></i></button>
+               </div>  
+            </div>
+            <span class="help-block">Must be at least seven characters long.</span>
+          
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button type="submit" form="change-form" class="btn submit-button">Change Password</button>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="bookshowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 class="modal-title" id="bookshow-title">Book Show</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+
+      <div class="modal-body some-spacing">
+
+         <div class="table-responsive">
+            <table class="table table-sm table-bordered w-100">
+            <tr>
+               <td class="align-middle">Title</td>
+               <td id="bookshow-book-title" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Author</td>
+               <td id="bookshow-book-author" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">ASIN</td>
+               <td id="bookshow-book-url" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Type</td>
+               <td id="bookshow-book-product-type" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Period</td>
+               <td id="bookshow-book-period" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Owner</td>
+               <td id="bookshow-book-owner" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Sales Rank</td>
+               <td id="bookshow-book-sales-rank" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Price</td>
+               <td id="bookshow-book-price" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Series</td>
+               <td id="bookshow-book-series" class="align-middle">None</td>
+            </tr>
+            <tr>
+               <td class="align-middle">Ranks</td>
+               <td id="bookshow-book-ranks" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Review Count</td>
+               <td id="bookshow-book-review-cnt" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Review Average</td>
+               <td id="bookshow-book-review-ave" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Review Stars</td>
+               <td id="bookshow-book-review-stars" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Last Report</td>
+               <td id="bookshow-book-last-reported" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Verify</td>
+               <td id="bookshow-book-verify" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">Plan</td>
+               <td id="bookshow-book-plan" class="align-middle"></td>
+            </tr>
+            <tr>
+               <td class="align-middle">History</td>
+               <td id="bookshow-book-history-metrics" class="align-middle"></td>
+            </tr>
+            </table>
+         </div>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn close submit-button" data-dismiss="modal">Close</button>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="bookaddModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 id="bookadd-title" class="modal-title">Book Add</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="bookadd-form">
+
+           <div class="form-group">
+
+              <label>How often do you want the report?</label>
+
+              <div class="btn-group btn-group-toggle btn-group-justified w-100" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookadd-period" id="bookadd-period-daily" value="daily" required> 
+                      <i class="fa fa-calendar-day"></i> Daily
+                </label>
+                <label class="btn btn-primary form-check-label btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookadd-period" id="bookadd-period-weekly" value="weekly" required> 
+                     <i class="fa fa-calendar-day"></i> Weekly
+                </label>
+                <label class="btn btn-primary hourly-limit-show form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookadd-period" id="bookadd-period-hourly" value="hourly" required> 
+                     <i class="fa fa-clock"></i> Hourly
+                </label>
+              </div>
+              <center>
+                 <span class="text-muted hourly-reached-show" style="display:none"><small>Your plan has reached its hourly limit.</small></span>
+              </center>
+
+           </div>
+
+           <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <label>Nickname:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="bookadd-nick" 
+                 name="bookadd-nick" 
+                 maxlength="16"
+                 required>
+               <span class="help-block">A short identifying nick name. Titles are often too long. Max length of 16 characters.</span>
+            </div>
+         
+           <div class="form-group">
+             <i class="fas fa-link"></i>
+             <label>Amazon.com Book URL</label>
+             <input
+                type="text"
+                name="bookadd-url",
+                id="bookadd-url",
+                class="form-control" 
+                style="text-transform:uppercase"
+                placeholder="B0192CTMYG"
+                required
+             >
+             <span class="help-block">
+               Which book do you want to track? Enter the Amazon URL or the ASIN (i.e.B079ZYWJJ8).
+             </span>
+
+           </div>
+
+           <div class="form-group">
+
+              <label>Whose book is this? Useful for reports.</label>
+
+              <div class="btn-group btn-group-toggle btn-group-justified w-100" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookadd-owner" id="bookadd-owner-yours" value="yours" autocomplete="off" required> 
+                     Yours
+                </label>
+                <label class="btn btn-primary form-check-label btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookadd-owner" id="bookadd-owner-competition" value="competition" autocomplete="off" required> 
+                     Competition
+                </label>
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookadd-owner" id="bookadd-owner-other" value="other" autocomplete="off" required> 
+                     Other
+                </label>
+              </div>
+
+           </div>
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button id="bookadd-submit-button" type="submit" form="bookadd-form" class="btn submit-button">Add Book</button>
+        <span class="help-block">
+           We have to validate the book. It can take a while.
+        </span>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="bookeditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 id="bookedit-title" class="modal-title">Book Edit</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="bookedit-form">
+
+           <div class="form-group">
+
+              <label>How often do you want the report?</label>
+
+              <div class="btn-group btn-group-toggle btn-group-justified w-100" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookedit-period" id="bookedit-period-daily" value="daily" required> 
+                      <i class="fa fa-calendar-day"></i> Daily
+                </label>
+                <label class="btn btn-primary form-check-label btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookedit-period" id="bookedit-period-weekly" value="weekly" required> 
+                     <i class="fa fa-calendar-day"></i> Weekly
+                </label>
+                <label class="btn btn-primary hourly-limit-show form-check-label btn-rounded btn-group-item" autocomplete="off">
+                  <input class="form-check-input" type="radio" name="bookedit-period" id="bookedit-period-hourly" value="hourly" required> 
+                     <i class="fa fa-clock"></i> Hourly
+                </label>
+              </div>
+
+              <center>
+                 <span class="text-muted hourly-reached-show" style="display:none;padding:0;margin:0"><small>Your plan has reached its hourly limit.</small></span>
+              </center>
+
+           </div>
+
+           <div class="form-group mt-2">
+              <i class="fas fa-envelope"></i>
+              <label>Nickname:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="bookedit-nick" 
+                 name="bookedit-nick" 
+                 maxlength="16"
+                 required>
+               <span class="help-block">A short identifying nick name. Titles are often too long. Max length of 16 characters.</span>
+            </div>
+
+          <div class="form-group mt-2">
+             <i class="fas fa-link"></i>
+             <label>Amazon.com Book URL</label>
+             <input
+                type="text"
+                name="bookedit-url",
+                id="bookedit-url",
+                class="form-control" 
+                style="text-transform:uppercase"
+                placeholder="B0192CTMYG"
+                required
+             >
+             <span class="help-block">
+               Existing book URLs can't be changed.
+             </span>
+
+           </div>
+         
+           <div class="form-group mt-2">
+
+              <label>Whose book is this? Useful for reports.</label>
+
+              <div class="btn-group btn-group-toggle btn-group-justified w-100" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookedit-owner" id="bookedit-owner-yours" value="yours" autocomplete="off" required> 
+                     Yours
+                </label>
+                <label class="btn btn-primary form-check-label btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookedit-owner" id="bookedit-owner-competition" value="competition" autocomplete="off" required> 
+                     Competition
+                </label>
+                <label class="btn btn-primary form-check-label btn-rounded btn-group-item">
+                  <input class="form-check-input btn-group-item" type="radio" name="bookedit-owner" id="bookedit-owner-other" value="other" autocomplete="off" required> 
+                     Other
+                </label>
+              </div>
+           </div>
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button id="bookedit-submit-button" type="submit" form="bookedit-form" class="btn submit-button">Save Book</button>
+      </div>
+
+      <div class="mt-2"><center>
+      <a id="book-delete-a" data-verify-msg="Are you sure you want to delete this book?" class="verify book-show-trash">Delete this Book?</a>
+      </center></div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+<div class="modal fade" id="splitaddModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <h4 id="bookedit-title" class="modal-title">Split Add</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+
+         <form id="splitadd-form">
+
+           <div class="form-group mt-2">
+              <label>Split:</label>
+              <input 
+                 type="text" 
+                 class="form-control" 
+                 id="splitadd-name" 
+                 name="splitadd-name" 
+                 maxlength="16"
+                 required>
+               <span class="help-block">A short identifying name for the split. Max of 16 characters.</span>
+           </div>
+           <span class="help-block">When did the split event occur?</span>
+
+           <div id="picker-example" class="md-form md-outline input-with-post-icon datepicker">
+              <input placeholder="Select date" type="text" id="splitadd-date" name="splitadd-date" class="form-control">
+              <label for="picker-example">Date:</label>
+              <i class="fas fa-calendar input-prefix" tabindex=0></i>
+           </div>
+
+           <input type="hidden" id="splitadd-url" name="splitadd-url">
+
+         </form>
+
+      </div> <!--body-->
+
+      <div class="modal-footer justify-content-center">
+        <button id="splitadd-submit-button" type="submit" form="splitadd-form" class="btn submit-button">Add Split</button>
+      </div>
+
+    </div> <!--content-->
+  </div> <!--dialog-->
+</div> <!--modal-->
+
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data-10-year-range.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
+
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+<script src="/js/amazon-cognito-identity.min.js"></script>
+<script src="/js/app-jquery-validators.js"></script>
+<script src="/js/app-handlebars.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/app-notify.js"></script>
+
+<script src="/js/util.js"></script>
+<script src="/js/cfg.js"></script>
+<script src="/js/Cognito.js"></script>
+<script src="/js/Poller.js"></script>
+<script src="/js/BsrService.js"></script>
+
+<script>
+   const app = new BsrService();
+
+   $(document).ready(async function() {
+      await app.start();
+
+      window.onbeforeunload = function () {
+         window.scrollTo(0, 0);
+      }
+
+      $(".reveal").on('click',function() {
+          var $pwd = $(".pwd");
+          if ($pwd.attr('type') === 'password') {
+              $pwd.attr('type', 'text');
+              $(this).html('<i class="fas fa-eye-slash">');
+          } else {
+              $pwd.attr('type', 'password');
+              $(this).html('<i class="fas fa-eye">');
+          }
+      })
+
+   })
+
+</script>
+
+</body>
+</html>

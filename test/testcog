@@ -1,0 +1,41 @@
+#! /usr/bin/env node
+
+global.AWS = require('aws-sdk');
+
+const Service = require('./js/BsrService');
+const Cognito = require('./js/Cognito');
+
+const service = new Service();
+
+const cognito = new Cognito(service, "t.oddhoffious@gmail.com", "98765432");
+//const cognito = new Cognito(service, "toddhoffious@gmail.com", "23456789");
+//const cognito = new Cognito(service, "toddhoffious@gmail.com", "12345678");
+
+
+(async () => {
+
+try {
+   var result;
+
+   //await cognito.delete();
+   await cognito.create();
+   //await cognito.authenticate();
+   //await cognito.resetPassword();
+   //await cognito.confirmPassword("272447", "98765432");
+   //await cognito.changePassword("23456789");
+} catch (error) {
+   console.log("ASYNC ERR:" + JSON.stringify(error));
+}
+
+})();
+
+
+// result:"SUCCESS"
+// error:{"code":"UsernameExistsException","name":"UsernameExistsException","message":"User already exists"}
+// error:{"code":"UserNotConfirmedException","name":"UserNotConfirmedException","message":"User is not confirmed."}
+// error:{"code":"NotAuthorizedException","name":"NotAuthorizedException","message":"Unable to 
+// result:{"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"t***@g***.com"}}
+// error:{"code":"CodeMismatchException","name":"CodeMismatchException","message":"Invalid verification code provided, please try again."}
+// error:{"code":"UnknownError","message":"Unknown error, the response body from fetch is: undefined"}
+/// error:{"message":"Logins don't match. Please include at least one valid login for this identity or identity pool
+// result: {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"t***@g***.com"}}

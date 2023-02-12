@@ -1,0 +1,134 @@
+#! /usr/bin/env node
+
+const UsersDto  = require("./lib/UsersDto");
+const AppCfg    = require("./lib/AppCfg");
+const Util      = require("./lib/Util");
+
+const cfg  = new AppCfg("..");
+
+const DB_ACTIONS = [ 
+{
+  "created_at": "2020-06-07T17:47:24.904Z",
+  "email": "toddhoffious@gmail.com",
+  "first_name": "John",
+  "last_name": "Hoff",
+  "plan": {
+    "capture_id": 0,
+    "downgraded": {
+      "days_to_add": 730,
+      "new_date": "2022-06-11T21:05:36.598Z",
+      "prev_expires_on": "2021-06-07T18:30:30.175Z",
+      "prev_type": "plan2",
+      "ts": "2020-06-11T21:05:36.598Z"
+    },
+    "expires_on": "2022-06-11T21:05:36.598Z",
+    "hourly_qty": 0,
+    "order_id": 0,
+    "payer_id": 0,
+    "ppd": 0.07,
+    "price": 25,
+    "qty": 5,
+    "started_on": "2020-06-11T21:05:36.597Z",
+    "title": "Five Book Plan",
+    "type": "plan1"
+  },
+  "plan_history": [
+    {
+      "expires_on": "2021-06-07T17:47:24.903Z",
+      "qty": 0,
+      "started_on": "2020-06-07T17:47:24.864Z",
+      "title": "Free Plan",
+      "type": "free"
+    },
+    {
+      "capture_id": "7MF35653J3102220A",
+      "expires_on": "2021-06-07T18:30:30.175Z",
+      "hourly_qty": 1,
+      "order_id": "40L32990FU4782636",
+      "payer_id": "7N45WPCKLHTVC",
+      "ppd": 0.14,
+      "price": 50,
+      "qty": 10,
+      "started_on": "2020-06-07T18:30:30.175Z",
+      "title": "Ten Book Plan",
+      "type": "plan2"
+    }
+  ],
+  "products": [
+    {
+      "nick": "explain",
+      "owner": "yours",
+      "page": {
+        "author": "Todd Hoff",
+        "currency": "$",
+        "order_type": "new",
+        "package_type": "single",
+        "pay_type": "Paid",
+        "price": "10.22",
+        "product_id": 0,
+        "product_type": "Kindle Edition",
+        "ranks": [
+          {
+            "category": "Computers & Technology",
+            "rank": "2379"
+          },
+          {
+            "category": "High-Tech Businesses",
+            "rank": "193"
+          },
+          {
+            "category": "Information Technology",
+            "rank": "22"
+          }
+        ],
+        "review_ave": 4.7,
+        "review_cnt": 114,
+        "review_stars": {
+          "1": "2",
+          "2": "1",
+          "3": "5",
+          "4": "8",
+          "5": "84"
+        },
+        "scrape_type": "scraper",
+        "store_rank": 97539,
+        "store_type": "Kindle Store",
+        "title": "Explain the Cloud Like I'm 10",
+        "ts": "2020-06-13T17:21:34.063Z"
+      },
+      "period": "daily",
+      "source": "amazon",
+      "type": "book",
+      "url": "https://www.amazon.com/dp/B0765C4SNR",
+      "verify_msg": "Your book was verified and added.",
+      "verify_status": "verified"
+    }
+  ],
+  "status": "up",
+  "version": "1"
+}
+   }
+]
+
+async function update() {
+
+   DB_ACTIONS.forEach(async function(item) {
+      const dto  = new UsersDto(cfg);
+      dto.data = Object.assign(dto.data, item);
+      await dto.update(dto);
+   })
+}
+
+(async () => {
+
+   try {
+
+      //const user = new UsersDto(cfg);
+      //user.remove("1@gmail.com");
+      await update();
+
+   } catch (error) {
+      console.log(error);
+   }
+
+})();
